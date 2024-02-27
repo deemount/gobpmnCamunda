@@ -2,7 +2,7 @@ package subprocesses
 
 import (
 	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewTransaction ...
@@ -11,7 +11,7 @@ func NewTransaction() TransactionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -45,7 +45,7 @@ func (transaction *Transaction) SetExtensionElements() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

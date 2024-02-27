@@ -4,6 +4,10 @@ import (
 	"github.com/deemount/gobpmnCamunda/pkg/attributes"
 )
 
+/*
+ * @Elementary
+ */
+
 // MultiInstanceLoopCharacteristics ...
 type MultiInstanceLoopCharacteristics struct {
 	CamundaAsyncBefore     bool                           `xml:"camunda:asyncBefore,attr,omitempty" json:"asyncBefore,omitempty"`

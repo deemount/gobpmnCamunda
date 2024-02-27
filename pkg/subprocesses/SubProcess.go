@@ -2,7 +2,7 @@ package subprocesses
 
 import (
 	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewSubProcess ...
@@ -11,7 +11,7 @@ func NewSubProcess() SubProcessRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -43,7 +43,7 @@ func (subprocess *SubProcess) SetExtensionElements() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

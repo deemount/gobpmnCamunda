@@ -4,6 +4,10 @@ import (
 	"github.com/deemount/gobpmnCamunda/pkg/attributes"
 )
 
+/*
+ * @Elementary
+ */
+
 // Process ...
 type Process struct {
 	attributes.Attributes

@@ -2,7 +2,7 @@ package elements
 
 import (
 	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewIntermediateCatchEvent ...
@@ -11,7 +11,7 @@ func NewIntermediateCatchEvent() IntermediateCatchEventRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -43,7 +43,7 @@ func (ice *IntermediateCatchEvent) SetExtensionElements() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

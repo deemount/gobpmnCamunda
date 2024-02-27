@@ -2,7 +2,7 @@ package gateways
 
 import (
 	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 func NewInclusiveGateway() InclusiveGatewayRepository {
@@ -10,7 +10,7 @@ func NewInclusiveGateway() InclusiveGatewayRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -42,7 +42,7 @@ func (inclusiveGateway *InclusiveGateway) SetExtensionElements() {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */

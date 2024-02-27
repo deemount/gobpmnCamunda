@@ -2,7 +2,7 @@ package subprocesses
 
 import (
 	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewCallActivity ...
@@ -11,7 +11,7 @@ func NewCallActivity() CallActivityRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -53,7 +53,7 @@ func (ca *CallActivity) SetExtensionElements() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

@@ -10,7 +10,7 @@ func NewGroup() GroupRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Elements */
@@ -23,7 +23,7 @@ func (group *Group) SetExtensionElements() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Elements */

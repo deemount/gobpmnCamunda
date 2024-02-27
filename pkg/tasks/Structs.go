@@ -5,10 +5,6 @@ import (
 	"github.com/deemount/gobpmnCamunda/pkg/camunda"
 )
 
-/*
- * Elementary
- */
-
 type Tasks struct {
 	BusinessRuleTask BUSINESS_RULE_TASK_SLC `xml:"bpmn:businessRuleTask,omitempty" json:"businessRuleTask,omitempty" csv:"-"`
 	Task             TASK_SLC               `xml:"bpmn:task,omitempty" json:"task,omitempty" csv:"-"`
@@ -30,6 +26,10 @@ type TTasks struct {
 	SendTask         SEND_TASK_SLC          `xml:"sendTask,omitempty" json:"sendTask,omitempty" csv:"-"`
 	ServiceTask      SERVICE_TASK_SLC       `xml:"serviceTask,omitempty" json:"serviceTask,omitempty" csv:"-"`
 }
+
+/*
+ * @Elementary
+ */
 
 // BusinessRuleTask ...
 type BusinessRuleTask struct {

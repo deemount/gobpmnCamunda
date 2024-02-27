@@ -40,6 +40,10 @@ type TCoreAttributes struct {
 	JobPriority int  `xml:"jobPriority,attr,omitempty" json:"jobPriority,omitempty"`
 }
 
+/*
+ * @Elementary
+ */
+
 // CamundaConnector ...
 type CamundaConnector struct {
 	CamundaInputOutput []CamundaInputOutput `xml:"camunda:inputOutput,omitempty" json:"inputOutput,omitempty"`

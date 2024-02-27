@@ -6,7 +6,7 @@ func NewCancelEventDefinition() CancelEventDefinitionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -18,7 +18,7 @@ func NewCancelEventDefinition() CancelEventDefinitionRepository {
 /** Camunda **/
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

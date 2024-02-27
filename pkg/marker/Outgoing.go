@@ -6,7 +6,7 @@ func NewOutgoing() OutgoingRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -17,7 +17,7 @@ func NewOutgoing() OutgoingRepository {
 
 /** Camunda **/
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

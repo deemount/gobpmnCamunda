@@ -6,7 +6,7 @@ func NewLinkEventDefinition() LinkEventDefinitionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -18,7 +18,7 @@ func NewLinkEventDefinition() LinkEventDefinitionRepository {
 /** Camunda **/
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

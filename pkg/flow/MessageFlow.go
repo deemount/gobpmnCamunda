@@ -10,7 +10,7 @@ func NewMessageFlow() MessageFlowRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /*** Make Elements ***/
@@ -25,7 +25,7 @@ func (messageFlow *MessageFlow) SetExtensionElements() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Elements */

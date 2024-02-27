@@ -10,7 +10,7 @@ func NewCategory() CategoryRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Elements */
@@ -23,7 +23,7 @@ func (category *Category) SetExtensionElements() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Elements */

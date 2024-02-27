@@ -1,4 +1,4 @@
-package attributes
+package extension_elements
 
 // ExtensionElements ...
 type EXTENSION_ELEMENTS_SLC []ExtensionElements

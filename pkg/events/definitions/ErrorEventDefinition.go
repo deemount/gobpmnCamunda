@@ -6,7 +6,7 @@ func NewErrorEventDefinition() ErrorEventDefinitionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -18,7 +18,7 @@ func NewErrorEventDefinition() ErrorEventDefinitionRepository {
 /** Camunda **/
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

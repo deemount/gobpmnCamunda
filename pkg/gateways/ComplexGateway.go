@@ -2,7 +2,7 @@ package gateways
 
 import (
 	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewComplexGateway ...
@@ -11,7 +11,7 @@ func NewComplexGateway() ComplexGatewayRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -43,7 +43,7 @@ func (complexGateway *ComplexGateway) SetExtensionElements() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

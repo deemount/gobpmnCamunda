@@ -2,7 +2,7 @@ package tasks
 
 import (
 	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewScriptTask ...
@@ -11,7 +11,7 @@ func NewScriptTask() ScriptTaskRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -43,7 +43,7 @@ func (scriptTask *ScriptTask) SetExtensionElements() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

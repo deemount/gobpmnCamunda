@@ -6,7 +6,7 @@ func NewParticipantMultiplicity() ParticipantMultiplicityRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -18,7 +18,7 @@ func NewParticipantMultiplicity() ParticipantMultiplicityRepository {
 /** Camunda **/
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

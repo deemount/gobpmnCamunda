@@ -6,7 +6,7 @@ func NewTerminateEventDefinition() TerminateEventDefinitionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -18,7 +18,7 @@ func NewTerminateEventDefinition() TerminateEventDefinitionRepository {
 /** Camunda **/
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

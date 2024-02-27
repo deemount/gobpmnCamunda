@@ -1,4 +1,4 @@
-package attributes
+package extension_elements
 
 import "github.com/deemount/gobpmnCamunda/pkg/camunda"
 

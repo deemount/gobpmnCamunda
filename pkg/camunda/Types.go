@@ -1,5 +1,9 @@
 package camunda
 
+/*
+ * @Slices
+ */
+
 type CAMUNDA_CONNECTOR_SLC []CamundaConnector
 type CAMUNDA_CONNECTOR_ID_SLC []CamundaConnectorID
 type CAMUNDA_PROPERTIES_SLC []CamundaProperties
@@ -21,6 +25,10 @@ type TCAMUNDA_TASK_LISTENER_SLC []TCamundaTaskListener
 type TCAMUNDA_EXECUTION_LISTENER_SLC []TCamundaExecutionListener
 type TCAMUNDA_IN_SLC []CamundaIn
 type TCAMUNDA_OUT_SLC []CamundaOut
+
+/*
+ * @Pointers
+ */
 
 type CAMUNDA_CONNECTOR_PTR *CamundaConnector
 type CAMUNDA_CONNECTOR_ID_PTR *CamundaConnectorID

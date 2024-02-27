@@ -6,7 +6,7 @@ func NewTimerEventDefinition() TimerEventDefinitionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -18,7 +18,7 @@ func NewTimerEventDefinition() TimerEventDefinitionRepository {
 /** Camunda **/
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

@@ -6,7 +6,7 @@ func NewStandardLoopCharacteristics() StandardLoopCharacteristicsRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -18,7 +18,7 @@ func NewStandardLoopCharacteristics() StandardLoopCharacteristicsRepository {
 /** Camunda **/
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

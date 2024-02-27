@@ -10,7 +10,7 @@ func NewIntermediateThrowEvent() IntermediateThrowEventRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Elements */
@@ -23,7 +23,7 @@ func (intermediateThrowEvent *IntermediateThrowEvent) SetExtensionElements() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Elements */

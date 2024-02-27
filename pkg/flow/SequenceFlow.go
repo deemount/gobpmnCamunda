@@ -10,7 +10,7 @@ func NewSequenceFlow() SequenceFlowRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Elements */
@@ -23,7 +23,7 @@ func (sequenceFlow *SequenceFlow) SetExtensionElements() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Elements */

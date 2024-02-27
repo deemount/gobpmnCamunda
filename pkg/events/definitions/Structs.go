@@ -6,6 +6,10 @@ type Boundaries struct{}
 // TBoundaries ...
 type TBoundaries struct{}
 
+/*
+ * @Elementary
+ */
+
 // CancelEventDefinition ...
 type CancelEventDefinition struct{}
 

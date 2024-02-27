@@ -1,8 +1,6 @@
 package data
 
-import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-)
+import "github.com/deemount/gobpmnCamunda/pkg/attributes"
 
 /*
  * Default Setters

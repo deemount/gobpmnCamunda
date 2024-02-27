@@ -11,6 +11,10 @@ type Subprocesses struct{}
 // TSubprocesses ...
 type TSubprocesses struct{}
 
+/*
+ * @Elementary
+ */
+
 // AdHocSubProcess ...
 type AdHocSubProcess struct {
 	attributes.Attributes

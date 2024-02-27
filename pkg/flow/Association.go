@@ -10,7 +10,7 @@ func NewAssociation() AssociationRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Elements */
@@ -23,7 +23,7 @@ func (association *Association) SetExtensionElements() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Elements */

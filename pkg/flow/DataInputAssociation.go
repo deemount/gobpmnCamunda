@@ -10,7 +10,7 @@ func NewDataInputAssociation() DataInputAssociationRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Elements */
@@ -23,7 +23,7 @@ func (dia *DataInputAssociation) SetExtensionElements() {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Elements */

@@ -2,7 +2,7 @@ package loop
 
 import (
 	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	"github.com/deemount/gobpmnModels/pkg/impl"
+	impl "github.com/deemount/gobpmnTypes"
 )
 
 // NewMultiInstanceLoopCharacteristics ...
@@ -11,7 +11,7 @@ func NewMultiInstanceLoopCharacteristics() MultiInstanceLoopCharacteristicsRepos
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -48,7 +48,7 @@ func (multiInstanceLoopCharacteristics *MultiInstanceLoopCharacteristics) SetExt
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
