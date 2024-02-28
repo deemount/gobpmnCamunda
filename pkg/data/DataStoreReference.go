@@ -1,11 +1,9 @@
 package data
 
-import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-)
+import "github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Elements */
@@ -14,11 +12,11 @@ import (
 
 // SetExtensionElements ...
 func (dsr *DataStoreReference) SetExtensionElements() {
-	dsr.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	dsr.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Elements */
@@ -26,6 +24,6 @@ func (dsr *DataStoreReference) SetExtensionElements() {
 /** BPMN **/
 
 // GetExtensionElements ...
-func (dsr DataStoreReference) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (dsr DataStoreReference) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &dsr.ExtensionElements[0]
 }

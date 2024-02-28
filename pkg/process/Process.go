@@ -1,8 +1,8 @@
 package process
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewProcess ...
@@ -54,7 +54,7 @@ func (process *Process) SetCamundaHistoryTimeToLive(tolive string) {
 
 // SetExtensionElements ...
 func (process *Process) SetExtensionElements() {
-	process.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	process.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -66,32 +66,32 @@ func (process *Process) SetExtensionElements() {
 /** Camunda **/
 
 // GetCamundaVersionTag ...
-func (process *Process) GetCamundaVersionTag() impl.STR_PTR {
+func (process *Process) GetCamundaVersionTag() gobpmnTypes.STR_PTR {
 	return &process.CamundaVersionTag
 }
 
 // GetCamundaJobpriority ...
-func (process *Process) GetCamundaJobPriority() impl.INT_PTR {
+func (process *Process) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &process.CamundaJobPriority
 }
 
 // GetCamundaTaskPriority ...
-func (process *Process) GetCamundaTaskPriority() impl.INT_PTR {
+func (process *Process) GetCamundaTaskPriority() gobpmnTypes.INT_PTR {
 	return &process.CamundaTaskPriority
 }
 
 // GetCamundaCandidateStarterGroups ...
-func (process *Process) GetCamundaCandidateStarterGroups() impl.STR_PTR {
+func (process *Process) GetCamundaCandidateStarterGroups() gobpmnTypes.STR_PTR {
 	return &process.CamundaCandidateStarterGroups
 }
 
 // GetCamundaCandidateStarterUsers
-func (process *Process) GetCamundaCandiddateStarterUsers() impl.STR_PTR {
+func (process *Process) GetCamundaCandiddateStarterUsers() gobpmnTypes.STR_PTR {
 	return &process.CamundaCandidateStarterUsers
 }
 
 // GetCamundaHistoryTimeToLive ...
-func (process *Process) GetCamundaHistoryTimeToLive() impl.STR_PTR {
+func (process *Process) GetCamundaHistoryTimeToLive() gobpmnTypes.STR_PTR {
 	return &process.CamundaHistoryTimeToLive
 }
 
@@ -100,6 +100,6 @@ func (process *Process) GetCamundaHistoryTimeToLive() impl.STR_PTR {
 /** BPMN **/
 
 // GetExtensionElements ...
-func (process Process) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (process Process) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &process.ExtensionElements[0]
 }

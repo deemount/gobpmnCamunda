@@ -1,8 +1,8 @@
 package elements
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewEndEvent ...
@@ -39,7 +39,7 @@ func (endEvent *EndEvent) SetCamundaJobPriority(priority int) {
 
 // SetExtensionElements ...
 func (endEvent *EndEvent) SetExtensionElements() {
-	endEvent.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	endEvent.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -51,17 +51,17 @@ func (endEvent *EndEvent) SetExtensionElements() {
 /** Camunda **/
 
 // GetCamundaAsyncBefore ...
-func (endEvent EndEvent) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (endEvent EndEvent) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &endEvent.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncBefore ...
-func (endEvent EndEvent) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (endEvent EndEvent) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &endEvent.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (endEvent EndEvent) GetCamundaJobPriority() impl.INT_PTR {
+func (endEvent EndEvent) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &endEvent.CamundaJobPriority
 }
 
@@ -70,6 +70,6 @@ func (endEvent EndEvent) GetCamundaJobPriority() impl.INT_PTR {
 /** BPMN **/
 
 // GetExtensionElements ...
-func (endEvent EndEvent) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (endEvent EndEvent) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &endEvent.ExtensionElements[0]
 }

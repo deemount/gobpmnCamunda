@@ -6,7 +6,7 @@ func NewCamundaOut() CamundaOutRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -17,7 +17,7 @@ func NewCamundaOut() CamundaOutRepository {
 
 /** Camunda **/
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

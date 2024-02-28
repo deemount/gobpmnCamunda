@@ -6,7 +6,7 @@ func NewCamundaMap() CamundaMapRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Elements */
@@ -15,11 +15,11 @@ func NewCamundaMap() CamundaMapRepository {
 
 // SetCamundaEntry
 func (mp *CamundaMap) SetCamundaEntry(num int) {
-	mp.CamundaEntry = make([]CamundaEntry, num)
+	mp.CamundaEntry = make(CAMUNDA_ENTRY_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Elements */
@@ -27,6 +27,6 @@ func (mp *CamundaMap) SetCamundaEntry(num int) {
 /** Camunda **/
 
 // GetCamundaEntry
-func (mp CamundaMap) GetCamundaEntry(num int) *CamundaEntry {
+func (mp CamundaMap) GetCamundaEntry(num int) CAMUNDA_ENTRY_PTR {
 	return &mp.CamundaEntry[num]
 }

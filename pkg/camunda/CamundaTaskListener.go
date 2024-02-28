@@ -1,6 +1,6 @@
 package camunda
 
-import impl "github.com/deemount/gobpmnTypes"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // NewCamundaTaskListener ...
 func NewCamundaTaskListener() CamundaTaskListenerRepository {
@@ -8,7 +8,7 @@ func NewCamundaTaskListener() CamundaTaskListenerRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -35,28 +35,28 @@ func (taskListener *CamundaTaskListener) SetListenerID(listenerID string) {
 
 // SetCamundaField ...
 func (taskListener *CamundaTaskListener) SetCamundaField(num int) {
-	taskListener.CamundaField = make([]CamundaField, num)
+	taskListener.CamundaField = make(CAMUNDA_FIELD_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
 
 // GetClass ...
-func (taskListener CamundaTaskListener) GetClass() impl.STR_PTR {
+func (taskListener CamundaTaskListener) GetClass() gobpmnTypes.STR_PTR {
 	return &taskListener.Class
 }
 
 // GetEvent ...
 // can be: assignment, create, complete, delete, update, timeout
-func (taskListener CamundaTaskListener) GetEvent() impl.STR_PTR {
+func (taskListener CamundaTaskListener) GetEvent() gobpmnTypes.STR_PTR {
 	return &taskListener.Event
 }
 
 // GetID ...
-func (taskListener CamundaTaskListener) GetListenerID() impl.STR_PTR {
+func (taskListener CamundaTaskListener) GetListenerID() gobpmnTypes.STR_PTR {
 	return &taskListener.ListenerID
 }
 
@@ -65,6 +65,6 @@ func (taskListener CamundaTaskListener) GetListenerID() impl.STR_PTR {
 /** Camunda **/
 
 // GetCamundaField ...
-func (taskListener CamundaTaskListener) GetCamundaField(num int) *CamundaField {
+func (taskListener CamundaTaskListener) GetCamundaField(num int) CAMUNDA_FIELD_PTR {
 	return &taskListener.CamundaField[num]
 }

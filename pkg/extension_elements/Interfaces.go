@@ -8,8 +8,8 @@ import (
  * @Base
  */
 
-// AttributesElements ...
-type AttributesBaseElements interface {
+// ExtensionElementsElements ...
+type ExtensionElementsBaseElements interface {
 	SetExtensionElements()
 	GetExtensionElements() EXTENSION_ELEMENTS_PTR
 }

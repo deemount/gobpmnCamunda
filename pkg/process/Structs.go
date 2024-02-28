@@ -1,8 +1,6 @@
 package process
 
-import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-)
+import "github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 
 /*
  * @Elementary
@@ -10,7 +8,7 @@ import (
 
 // Process ...
 type Process struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 	CamundaVersionTag             string `xml:"camunda:versionTag,attr,omitempty" json:"versionTag,omitempty"`
 	CamundaJobPriority            int    `xml:"camunda:jobPriority,attr,omitempty" json:"jobPriority,omitempty"`
 	CamundaTaskPriority           int    `xml:"camunda:taskPriority,attr,omitempty" json:"taskPriority,omitempty"`
@@ -21,7 +19,7 @@ type Process struct {
 
 // TProcess ...
 type TProcess struct {
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 	VersionTag             string `xml:"versionTag,attr,omitempty" json:"versionTag,omitempty"`
 	JobPriority            int    `xml:"jobPriority,attr,omitempty" json:"jobPriority,omitempty"`
 	TaskPriority           int    `xml:"taskPriority,attr,omitempty" json:"taskPriority,omitempty"`

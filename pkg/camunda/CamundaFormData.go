@@ -6,7 +6,7 @@ func NewCamundaFormData() CamundaFormDataRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Elements */
@@ -15,11 +15,11 @@ func NewCamundaFormData() CamundaFormDataRepository {
 
 // SetCamundaFormField ...
 func (formData *CamundaFormData) SetCamundaFormField(num int) {
-	formData.CamundaFormField = make([]CamundaFormField, num)
+	formData.CamundaFormField = make(CAMUNDA_FORM_FIELD_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Elements */
@@ -27,6 +27,6 @@ func (formData *CamundaFormData) SetCamundaFormField(num int) {
 /** Camunda **/
 
 // GetCamundaFormField ...
-func (formData CamundaFormData) GetCamundaFormField(num int) *CamundaFormField {
+func (formData CamundaFormData) GetCamundaFormField(num int) CAMUNDA_FORM_FIELD_PTR {
 	return &formData.CamundaFormField[num]
 }

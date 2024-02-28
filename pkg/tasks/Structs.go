@@ -1,8 +1,8 @@
 package tasks
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
 	"github.com/deemount/gobpmnCamunda/pkg/camunda"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 )
 
 type Tasks struct {
@@ -33,93 +33,93 @@ type TTasks struct {
 
 // BusinessRuleTask ...
 type BusinessRuleTask struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 	camunda.CoreAttributes
 	CamundaClass string `xml:"camunda:class,attr,omitempty" json:"class,omitempty"`
 }
 
 // TBusinessRuleTask ...
 type TBusinessRuleTask struct {
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 	camunda.TCoreAttributes
 	Class string `xml:"class,attr,omitempty" json:"class,omitempty"`
 }
 
 // ManualTask ...
 type ManualTask struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 	camunda.CoreAttributes
 }
 
 // TManualTask ...
 type TManualTask struct {
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 	camunda.TCoreAttributes
 }
 
 // ReceiveTask ...
 type ReceiveTask struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 	camunda.CoreAttributes
 }
 
 // TReceiveTask ...
 type TReceiveTask struct {
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 	camunda.TCoreAttributes
 }
 
 // ScriptTask ...
 type ScriptTask struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 	camunda.CoreAttributes
 }
 
 // TScriptTask ...
 type TScriptTask struct {
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 	camunda.TCoreAttributes
 }
 
 // SendTask ...
 type SendTask struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 	camunda.CoreAttributes
 }
 
 // TSendTask ...
 type TSendTask struct {
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 	camunda.TCoreAttributes
 }
 
 // ServiceTask ...
 type ServiceTask struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 	camunda.CoreAttributes
 }
 
 // TServiceTask ...
 type TServiceTask struct {
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 	camunda.TCoreAttributes
 }
 
 // Task ...
 type Task struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 	camunda.CoreAttributes
 }
 
 // TTask ...
 type TTask struct {
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 	camunda.TCoreAttributes
 }
 
 // UserTask ...
 type UserTask struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 	camunda.CoreAttributes
 	CamundaFormKey         string `xml:"camunda:formKey,attr,omitempty" json:"formKey,omitempty"`
 	CamundaAssignee        string `xml:"camunda:assignee,attr,omitempty" json:"assignee,omitempty"`
@@ -132,7 +132,7 @@ type UserTask struct {
 
 // TUserTask ...
 type TUserTask struct {
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 	camunda.TCoreAttributes
 	FormKey         string `xml:"formKey,attr,omitempty" json:"formKey,omitempty"`
 	Assignee        string `xml:"assignee,attr,omitempty" json:"assignee,omitempty"`

@@ -1,5 +1,9 @@
 package core
 
+/*
+ * @Elementary
+ */
+
 // Definitions represents the root element
 type Definitions struct {
 	CamundaSchema                   string `xml:"xmlns:camunda,attr,omitempty" json:"-"`

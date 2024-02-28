@@ -1,6 +1,6 @@
 package camunda
 
-import impl "github.com/deemount/gobpmnTypes"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // NewCamundaConstraint ...
 func NewCamunadConstraint() CamundaConstraintRepository {
@@ -8,7 +8,7 @@ func NewCamunadConstraint() CamundaConstraintRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -24,17 +24,17 @@ func (cconstraint *CamundaConstraint) SetConfig(config string) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
 
 // GetName ...
-func (cconstraint CamundaConstraint) GetName() impl.STR_PTR {
+func (cconstraint CamundaConstraint) GetName() gobpmnTypes.STR_PTR {
 	return &cconstraint.Name
 }
 
 // GetConfig ...
-func (cconstraint CamundaConstraint) GetConfig() impl.STR_PTR {
+func (cconstraint CamundaConstraint) GetConfig() gobpmnTypes.STR_PTR {
 	return &cconstraint.Config
 }

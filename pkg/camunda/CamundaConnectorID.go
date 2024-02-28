@@ -3,7 +3,7 @@ package camunda
 import (
 	"fmt"
 
-	impl "github.com/deemount/gobpmnTypes"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewCamundaConnectorID ...
@@ -12,7 +12,7 @@ func NewCamundaConnectorID() CamundaConnectorIDRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Content */
@@ -23,17 +23,16 @@ func (cconnectorId *CamundaConnectorID) SetID(typ string, suffix interface{}) {
 	switch typ {
 	case "id":
 		cconnectorId.ID = fmt.Sprintf("%s", suffix)
-		break
 	}
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Content */
 
 // GetID ...
-func (cconnectorId CamundaConnectorID) GetID() impl.STR_PTR {
+func (cconnectorId CamundaConnectorID) GetID() gobpmnTypes.STR_PTR {
 	return &cconnectorId.ID
 }

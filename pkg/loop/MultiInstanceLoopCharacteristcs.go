@@ -1,8 +1,8 @@
 package loop
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewMultiInstanceLoopCharacteristics ...
@@ -44,7 +44,7 @@ func (multiInstanceLoopCharacteristics *MultiInstanceLoopCharacteristics) SetCam
 
 // SetExtensionElements ...
 func (multiInstanceLoopCharacteristics *MultiInstanceLoopCharacteristics) SetExtensionElements() {
-	multiInstanceLoopCharacteristics.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	multiInstanceLoopCharacteristics.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -56,22 +56,22 @@ func (multiInstanceLoopCharacteristics *MultiInstanceLoopCharacteristics) SetExt
 /** Camunda **/
 
 // GetCamundaAsyncBefore ...
-func (multiInstanceLoopCharacteristics MultiInstanceLoopCharacteristics) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (multiInstanceLoopCharacteristics MultiInstanceLoopCharacteristics) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &multiInstanceLoopCharacteristics.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncAfter ...
-func (multiInstanceLoopCharacteristics MultiInstanceLoopCharacteristics) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (multiInstanceLoopCharacteristics MultiInstanceLoopCharacteristics) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &multiInstanceLoopCharacteristics.CamundaAsyncAfter
 }
 
 // GetCamundaCollection ...
-func (multiInstanceLoopCharacteristics MultiInstanceLoopCharacteristics) GetCamundaCollection() impl.STR_PTR {
+func (multiInstanceLoopCharacteristics MultiInstanceLoopCharacteristics) GetCamundaCollection() gobpmnTypes.STR_PTR {
 	return &multiInstanceLoopCharacteristics.CamundaCollection
 }
 
 // GetCamundaElementVariable ...
-func (multiInstanceLoopCharacteristics MultiInstanceLoopCharacteristics) GetCamundaElementVariable() impl.STR_PTR {
+func (multiInstanceLoopCharacteristics MultiInstanceLoopCharacteristics) GetCamundaElementVariable() gobpmnTypes.STR_PTR {
 	return &multiInstanceLoopCharacteristics.CamundaElementVariable
 }
 
@@ -80,6 +80,6 @@ func (multiInstanceLoopCharacteristics MultiInstanceLoopCharacteristics) GetCamu
 /** BPMN **/
 
 // GetExtensionElements ...
-func (multiInstanceLoopCharacteristics MultiInstanceLoopCharacteristics) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (multiInstanceLoopCharacteristics MultiInstanceLoopCharacteristics) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &multiInstanceLoopCharacteristics.ExtensionElements[0]
 }

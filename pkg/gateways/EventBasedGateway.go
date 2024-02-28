@@ -1,8 +1,8 @@
 package gateways
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewEventBasedGateway ...
@@ -39,7 +39,7 @@ func (eventBasedGateway *EventBasedGateway) SetCamundaJobPriority(priority int) 
 
 // SetExtensionElements ...
 func (eventBasedGateway *EventBasedGateway) SetExtensionElements() {
-	eventBasedGateway.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	eventBasedGateway.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -51,17 +51,17 @@ func (eventBasedGateway *EventBasedGateway) SetExtensionElements() {
 /** Camunda **/
 
 // GetCamundaAsyncBefore ...
-func (eventBasedGateway EventBasedGateway) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (eventBasedGateway EventBasedGateway) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &eventBasedGateway.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncAfter ...
-func (eventBasedGateway EventBasedGateway) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (eventBasedGateway EventBasedGateway) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &eventBasedGateway.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (eventBasedGateway EventBasedGateway) GetCamundaJobPriority() impl.INT_PTR {
+func (eventBasedGateway EventBasedGateway) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &eventBasedGateway.CamundaJobPriority
 }
 
@@ -70,6 +70,6 @@ func (eventBasedGateway EventBasedGateway) GetCamundaJobPriority() impl.INT_PTR 
 /** BPMN **/
 
 // GetExtensionElements ...
-func (eventBasedGateway EventBasedGateway) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (eventBasedGateway EventBasedGateway) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &eventBasedGateway.ExtensionElements[0]
 }

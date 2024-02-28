@@ -1,8 +1,6 @@
 package flow
 
-import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-)
+import "github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 
 /*
  * @Repositories
@@ -10,20 +8,20 @@ import (
 
 // AssociationRepository ...
 type AssociationRepository interface {
-	attributes.AttributesBaseElements
+	extension_elements.ExtensionElementsBaseElements
 }
 
 // DataInputAssociationRepository ...
 type DataInputAssociationRepository interface {
-	attributes.AttributesBaseElements
+	extension_elements.ExtensionElementsBaseElements
 }
 
 // MessageFlowRepository ...
 type MessageFlowRepository interface {
-	attributes.AttributesBaseElements
+	extension_elements.ExtensionElementsBaseElements
 }
 
 // SequenceFlowRepository ...
 type SequenceFlowRepository interface {
-	attributes.AttributesBaseElements
+	extension_elements.ExtensionElementsBaseElements
 }

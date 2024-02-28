@@ -1,8 +1,8 @@
 package gateways
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 func NewInclusiveGateway() InclusiveGatewayRepository {
@@ -38,7 +38,7 @@ func (inclusiveGateway *InclusiveGateway) SetCamundaJobPriority(priority int) {
 
 // SetExtensionElements ...
 func (inclusiveGateway *InclusiveGateway) SetExtensionElements() {
-	inclusiveGateway.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	inclusiveGateway.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -50,17 +50,17 @@ func (inclusiveGateway *InclusiveGateway) SetExtensionElements() {
 /** Camunda **/
 
 // SetCamundaAsyncBefore ...
-func (inclusiveGateway InclusiveGateway) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (inclusiveGateway InclusiveGateway) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &inclusiveGateway.CamundaAsyncBefore
 }
 
 // SetCamundaAsyncAfter ...
-func (inclusiveGateway InclusiveGateway) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (inclusiveGateway InclusiveGateway) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &inclusiveGateway.CamundaAsyncAfter
 }
 
 // SetCamundaJobPriority ...
-func (inclusiveGateway InclusiveGateway) GetCamundaJobPriority() impl.INT_PTR {
+func (inclusiveGateway InclusiveGateway) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &inclusiveGateway.CamundaJobPriority
 }
 
@@ -69,6 +69,6 @@ func (inclusiveGateway InclusiveGateway) GetCamundaJobPriority() impl.INT_PTR {
 /** BPMN **/
 
 // GetExtensionElements ...
-func (inclusiveGateway InclusiveGateway) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (inclusiveGateway InclusiveGateway) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &inclusiveGateway.ExtensionElements[0]
 }

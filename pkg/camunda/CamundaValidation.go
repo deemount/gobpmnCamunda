@@ -6,7 +6,7 @@ func NewCamundaValidation() CamundaValidationRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Elements */
@@ -15,11 +15,11 @@ func NewCamundaValidation() CamundaValidationRepository {
 
 // SetCamundaConstraint ...
 func (validation *CamundaValidation) SetCamundaConstraint(num int) {
-	validation.CamundaConstraint = make([]CamundaConstraint, num)
+	validation.CamundaConstraint = make(CAMUNDA_CONSTRAINT_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Elements */
@@ -27,6 +27,6 @@ func (validation *CamundaValidation) SetCamundaConstraint(num int) {
 /** Camunda **/
 
 // GetCamundaConstraint ...
-func (validation CamundaValidation) GetCamundaConstraint(num int) *CamundaConstraint {
+func (validation CamundaValidation) GetCamundaConstraint(num int) CAMUNDA_CONSTRAINT_PTR {
 	return &validation.CamundaConstraint[num]
 }

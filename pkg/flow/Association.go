@@ -1,8 +1,6 @@
 package flow
 
-import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-)
+import "github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 
 // NewAssociation ...
 func NewAssociation() AssociationRepository {
@@ -19,7 +17,7 @@ func NewAssociation() AssociationRepository {
 
 // SetExtensionElements ...
 func (association *Association) SetExtensionElements() {
-	association.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	association.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -31,6 +29,6 @@ func (association *Association) SetExtensionElements() {
 /** BPMN **/
 
 // GetExtensionElements ...
-func (association Association) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (association Association) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &association.ExtensionElements[0]
 }

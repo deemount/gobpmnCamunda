@@ -1,8 +1,8 @@
 package elements
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewStartEvent ...
@@ -64,7 +64,7 @@ func (startEvent *StartEvent) SetCamundaInitiator(initiator string) {
 
 // SetExtensionElements ...
 func (startEvent *StartEvent) SetExtensionElements() {
-	startEvent.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	startEvent.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -76,48 +76,48 @@ func (startEvent *StartEvent) SetExtensionElements() {
 /** Camunda **/
 
 // SetCamundaFormKey ...
-func (startEvent StartEvent) GetCamundaFormKey() impl.STR_PTR {
+func (startEvent StartEvent) GetCamundaFormKey() gobpmnTypes.STR_PTR {
 	return &startEvent.CamundaFormKey
 }
 
 // GetCamundaFormRef ...
-func (startEvent StartEvent) GetCamundaFormRef() impl.STR_PTR {
+func (startEvent StartEvent) GetCamundaFormRef() gobpmnTypes.STR_PTR {
 	return &startEvent.CamundaFormRef
 }
 
 // GetCamundaFormRefBinding ...
-func (startEvent StartEvent) GetCamundaFormRefBinding() impl.STR_PTR {
+func (startEvent StartEvent) GetCamundaFormRefBinding() gobpmnTypes.STR_PTR {
 	return &startEvent.CamundaFormRefBind
 }
 
 // GetCamundaFormRefVersion ...
-func (startEvent StartEvent) GetCamundaFormRefVersion() impl.STR_PTR {
+func (startEvent StartEvent) GetCamundaFormRefVersion() gobpmnTypes.STR_PTR {
 	return &startEvent.CamundaFormRefVersion
 }
 
 // GetCamundaAsyncBefore ...
-func (startEvent StartEvent) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (startEvent StartEvent) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &startEvent.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncAfter ...
-func (startEvent StartEvent) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (startEvent StartEvent) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &startEvent.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (startEvent StartEvent) GetCamundaJobPriority() impl.INT_PTR {
+func (startEvent StartEvent) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &startEvent.CamundaJobPriority
 }
 
 // GetCamundaInitiator ...
-func (startEvent StartEvent) GetCamundaInitiator() impl.STR_PTR {
+func (startEvent StartEvent) GetCamundaInitiator() gobpmnTypes.STR_PTR {
 	return &startEvent.CamundaInitiator
 }
 
 /* Elements */
 
 // GetExtensionElements ...
-func (startEvent StartEvent) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (startEvent StartEvent) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &startEvent.ExtensionElements[0]
 }

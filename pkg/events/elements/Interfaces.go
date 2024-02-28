@@ -1,8 +1,8 @@
 package elements
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 /*
@@ -12,11 +12,11 @@ import (
 // EventElementsCamundaBase ...
 type EventElementsCamundaBase interface {
 	SetCamundaAsyncBefore(asyncBefore bool)
-	GetCamundaAsyncBefore() impl.BOOL_PTR
+	GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR
 	SetCamundaAsyncAfter(asyncAfter bool)
-	GetCamundaAsyncAfter() impl.BOOL_PTR
+	GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR
 	SetCamundaJobPriority(priority int)
-	GetCamundaJobPriority() impl.INT_PTR
+	GetCamundaJobPriority() gobpmnTypes.INT_PTR
 }
 
 /*
@@ -26,33 +26,33 @@ type EventElementsCamundaBase interface {
 // EndEventRepository ...
 type EndEventRepository interface {
 	EventElementsCamundaBase
-	attributes.AttributesBaseElements
+	extension_elements.ExtensionElementsBaseElements
 }
 
 // IntermediateCatchEventRepository ...
 type IntermediateCatchEventRepository interface {
 	EventElementsCamundaBase
-	attributes.AttributesBaseElements
+	extension_elements.ExtensionElementsBaseElements
 }
 
 // IntermediateThrowEventRepository ...
 type IntermediateThrowEventRepository interface {
-	attributes.AttributesBaseElements
+	extension_elements.ExtensionElementsBaseElements
 }
 
 // StartEventRepository ...
 type StartEventRepository interface {
 	EventElementsCamundaBase
-	attributes.AttributesBaseElements
+	extension_elements.ExtensionElementsBaseElements
 
 	SetCamundaFormKey(key string)
-	GetCamundaFormKey() impl.STR_PTR
+	GetCamundaFormKey() gobpmnTypes.STR_PTR
 	SetCamundaFormRef(ref string)
-	GetCamundaFormRef() impl.STR_PTR
+	GetCamundaFormRef() gobpmnTypes.STR_PTR
 	SetCamundaFormRefBinding(bind string)
-	GetCamundaFormRefBinding() impl.STR_PTR
+	GetCamundaFormRefBinding() gobpmnTypes.STR_PTR
 	SetCamundaFormRefVersion(version string)
-	GetCamundaFormRefVersion() impl.STR_PTR
+	GetCamundaFormRefVersion() gobpmnTypes.STR_PTR
 	SetCamundaInitiator(initiator string)
-	GetCamundaInitiator() impl.STR_PTR
+	GetCamundaInitiator() gobpmnTypes.STR_PTR
 }

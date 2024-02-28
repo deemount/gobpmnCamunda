@@ -1,6 +1,6 @@
 package definitions
 
-import impl "github.com/deemount/gobpmnTypes"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 /*
  * @Repositories
@@ -15,7 +15,7 @@ type CompensateEventDefinitionRepository interface{}
 // ConditionalEventDefinitionRepository ...
 type ConditionalEventDefinitionRepository interface {
 	SetCamundaVariableName(variableName string)
-	GetCamundaVariableName() impl.STR_PTR
+	GetCamundaVariableName() gobpmnTypes.STR_PTR
 }
 
 // ErrorEventDefinitionRepository ...

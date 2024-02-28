@@ -8,7 +8,7 @@ func NewExtensionElements() ExtensionElementsRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Elements */
@@ -16,52 +16,52 @@ func NewExtensionElements() ExtensionElementsRepository {
 /** Camunda **/
 
 // SetCamundaConnector ...
-func (extel *ExtensionElements) SetCamundaConnector() {
-	extel.CamundaConnector = make([]camunda.CamundaConnector, 1)
+func (extensionElements *ExtensionElements) SetCamundaConnector() {
+	extensionElements.CamundaConnector = make(camunda.CAMUNDA_CONNECTOR_SLC, 1)
 }
 
 // SetCamundaProperties ...
-func (extel *ExtensionElements) SetCamundaProperties() {
-	extel.CamundaProperties = make([]camunda.CamundaProperties, 1)
+func (extensionElements *ExtensionElements) SetCamundaProperties() {
+	extensionElements.CamundaProperties = make(camunda.CAMUNDA_PROPERTIES_SLC, 1)
 }
 
 // SetCamundaFailedJobRetryCycle ...
-func (extel *ExtensionElements) SetCamundaFailedJobRetryCycle() {
-	extel.CamundaFailedJobRetryCycle = make([]camunda.CamundaFailedJobRetryCycle, 1)
+func (extensionElements *ExtensionElements) SetCamundaFailedJobRetryCycle() {
+	extensionElements.CamundaFailedJobRetryCycle = make(camunda.CAMUNDA_FAILED_JOB_RETRY_CYCLE_SLC, 1)
 }
 
 // SetCamundaFormData ...
-func (extel *ExtensionElements) SetCamundaFormData() {
-	extel.CamundaFormData = make([]camunda.CamundaFormData, 1)
+func (extensionElements *ExtensionElements) SetCamundaFormData() {
+	extensionElements.CamundaFormData = make(camunda.CAMUNDA_FORM_DATA_SLC, 1)
 }
 
 // SetCamundaInputOutput ...
-func (extel *ExtensionElements) SetCamundaInputOutput() {
-	extel.CamundaInputOutput = make([]camunda.CamundaInputOutput, 1)
+func (extensionElements *ExtensionElements) SetCamundaInputOutput() {
+	extensionElements.CamundaInputOutput = make([]camunda.CamundaInputOutput, 1)
 }
 
 // SetCamundaTaskListener ...
-func (extel *ExtensionElements) SetCamundaTaskListener(num int) {
-	extel.CamundaTaskListener = make([]camunda.CamundaTaskListener, num)
+func (extensionElements *ExtensionElements) SetCamundaTaskListener(num int) {
+	extensionElements.CamundaTaskListener = make(camunda.CAMUNDA_TASK_LISTENER_SLC, num)
 }
 
 // SetCamundaExecutionListener ...
-func (extel *ExtensionElements) SetCamundaExecutionListener(num int) {
-	extel.CamundaExecutionListener = make([]camunda.CamundaExecutionListener, num)
+func (extensionElements *ExtensionElements) SetCamundaExecutionListener(num int) {
+	extensionElements.CamundaExecutionListener = make(camunda.CAMUNDA_EXECUTION_LISTENER_SLC, num)
 }
 
 // SetCamundaIn ...
-func (extel *ExtensionElements) SetCamundaIn(num int) {
-	extel.CamundaIn = make([]camunda.CamundaIn, num)
+func (extensionElements *ExtensionElements) SetCamundaIn(num int) {
+	extensionElements.CamundaIn = make(camunda.CAMUNDA_IN_SLC, num)
 }
 
 // SetCamundaOut ...
-func (extel *ExtensionElements) SetCamundaOut(num int) {
-	extel.CamundaOut = make([]camunda.CamundaOut, num)
+func (extensionElements *ExtensionElements) SetCamundaOut(num int) {
+	extensionElements.CamundaOut = make(camunda.CAMUNDA_OUT_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Elements */
@@ -69,46 +69,46 @@ func (extel *ExtensionElements) SetCamundaOut(num int) {
 /** Camunda **/
 
 // GetCamundaConnector ...
-func (extel *ExtensionElements) GetCamundaConnector() *camunda.CamundaConnector {
-	return &extel.CamundaConnector[0]
+func (extensionElements ExtensionElements) GetCamundaConnector() camunda.CAMUNDA_CONNECTOR_PTR {
+	return &extensionElements.CamundaConnector[0]
 }
 
 // GetCamundaProperties ...
-func (extel ExtensionElements) GetCamundaProperties() *camunda.CamundaProperties {
-	return &extel.CamundaProperties[0]
+func (extensionElements ExtensionElements) GetCamundaProperties() camunda.CAMUNDA_PROPERTIES_PTR {
+	return &extensionElements.CamundaProperties[0]
 }
 
 // GetCamundaFailedJobRetryCycle ...
-func (extel ExtensionElements) GetCamundaFailedJobRetryCycle() *camunda.CamundaFailedJobRetryCycle {
-	return &extel.CamundaFailedJobRetryCycle[0]
+func (extensionElements ExtensionElements) GetCamundaFailedJobRetryCycle() camunda.CAMUNDA_FAILED_JOB_RETRY_CYCLE_PTR {
+	return &extensionElements.CamundaFailedJobRetryCycle[0]
 }
 
 // GetCamundaFormData ...
-func (extel ExtensionElements) GetCamundaFormData() *camunda.CamundaFormData {
-	return &extel.CamundaFormData[0]
+func (extensionElements ExtensionElements) GetCamundaFormData() camunda.CAMUNDA_FORM_DATA_PTR {
+	return &extensionElements.CamundaFormData[0]
 }
 
 // GetCamundaInputOutput ...
-func (extel ExtensionElements) GetCamundaInputOutput() *camunda.CamundaInputOutput {
-	return &extel.CamundaInputOutput[0]
+func (extensionElements ExtensionElements) GetCamundaInputOutput() camunda.CAMUNDA_IO_PTR {
+	return &extensionElements.CamundaInputOutput[0]
 }
 
 // GetCamundaTaskListener ...
-func (extel ExtensionElements) GetCamundaTaskListener(num int) *camunda.CamundaTaskListener {
-	return &extel.CamundaTaskListener[num]
+func (extensionElements ExtensionElements) GetCamundaTaskListener(num int) camunda.CAMUNDA_TASK_LISTENER_PTR {
+	return &extensionElements.CamundaTaskListener[num]
 }
 
 // GetCamundaExecutionListener ...
-func (extel ExtensionElements) GetCamundaExecutionListener(num int) *camunda.CamundaExecutionListener {
-	return &extel.CamundaExecutionListener[num]
+func (extensionElements ExtensionElements) GetCamundaExecutionListener(num int) camunda.CAMUNDA_EXECUTION_LISTENER_PTR {
+	return &extensionElements.CamundaExecutionListener[num]
 }
 
 // GetCamundaIn ...
-func (extel ExtensionElements) GetCamundaIn(num int) *camunda.CamundaIn {
-	return &extel.CamundaIn[num]
+func (extensionElements ExtensionElements) GetCamundaIn(num int) camunda.CAMUNDA_IN_PTR {
+	return &extensionElements.CamundaIn[num]
 }
 
 // GetCamundaOut ...
-func (extel ExtensionElements) GetCamundaOut(num int) *camunda.CamundaOut {
-	return &extel.CamundaOut[num]
+func (extensionElements ExtensionElements) GetCamundaOut(num int) camunda.CAMUNDA_OUT_PTR {
+	return &extensionElements.CamundaOut[num]
 }

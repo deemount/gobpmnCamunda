@@ -6,7 +6,7 @@ func NewCamundaExpression() CamundaExpressionRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -18,7 +18,7 @@ func NewCamundaExpression() CamundaExpressionRepository {
 /** Camunda **/
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

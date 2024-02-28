@@ -3,7 +3,7 @@ package camunda
 import (
 	"fmt"
 
-	impl "github.com/deemount/gobpmnTypes"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewCamundaFormField ...
@@ -12,7 +12,7 @@ func NewCamundaFormField() CamundaFormFieldRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -51,51 +51,51 @@ func (formfield *CamundaFormField) SetDefaultValue(defaultValue string) {
 
 // SetCamundaProperties ...
 func (formfield *CamundaFormField) SetCamundaProperties() {
-	formfield.CamundaProperties = make([]CamundaProperties, 1)
+	formfield.CamundaProperties = make(CAMUNDA_PROPERTIES_SLC, 1)
 }
 
 // SetCamundaValidation ...
 func (formfield *CamundaFormField) SetCamundaValidation() {
-	formfield.CamundaValidation = make([]CamundaValidation, 1)
+	formfield.CamundaValidation = make(CAMUNDA_VALIDATION_SLC, 1)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
 
 // GetID ...
-func (formfield CamundaFormField) GetID() impl.STR_PTR {
+func (formfield CamundaFormField) GetID() gobpmnTypes.STR_PTR {
 	return &formfield.ID
 }
 
 // GetLabel ...
-func (formfield CamundaFormField) GetLabel() impl.STR_PTR {
+func (formfield CamundaFormField) GetLabel() gobpmnTypes.STR_PTR {
 	return &formfield.Label
 }
 
 // GetType ...
 // can be: string, long, boolean, date, enum, custom type
-func (formfield CamundaFormField) GetType() impl.STR_PTR {
+func (formfield CamundaFormField) GetType() gobpmnTypes.STR_PTR {
 	return &formfield.Typ
 }
 
 // GetDefaultValue ...
-func (formfield CamundaFormField) GetDefaultValue() impl.STR_PTR {
+func (formfield CamundaFormField) GetDefaultValue() gobpmnTypes.STR_PTR {
 	return &formfield.DefaultValue
 }
 
-/*** Make Elements ***/
+/* Elements */
 
 /** Camunda **/
 
 // GetCamundaProperties ...
-func (formfield CamundaFormField) GetCamundaProperties() *CamundaProperties {
+func (formfield CamundaFormField) GetCamundaProperties() CAMUNDA_PROPERTIES_PTR {
 	return &formfield.CamundaProperties[0]
 }
 
 // GetCamundaValidation ...
-func (formfield CamundaFormField) GetCamundaValidation() *CamundaValidation {
+func (formfield CamundaFormField) GetCamundaValidation() CAMUNDA_VALIDATION_PTR {
 	return &formfield.CamundaValidation[0]
 }

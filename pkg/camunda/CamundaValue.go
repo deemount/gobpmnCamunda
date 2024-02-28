@@ -1,6 +1,6 @@
 package camunda
 
-import impl "github.com/deemount/gobpmnTypes"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // NewCamundaValue ...
 func NewCamundaValue() CamundaValueRepository {
@@ -8,7 +8,7 @@ func NewCamundaValue() CamundaValueRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Content */
@@ -19,12 +19,12 @@ func (value *CamundaValue) SetValue(val string) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Content */
 
 // GetValue ...
-func (value CamundaValue) GetValue() impl.STR_PTR {
+func (value CamundaValue) GetValue() gobpmnTypes.STR_PTR {
 	return &value.Value
 }

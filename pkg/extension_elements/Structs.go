@@ -5,12 +5,12 @@ import (
 )
 
 // Attributes ...
-type Attributes struct {
+type Extension_Elements struct {
 	ExtensionElements EXTENSION_ELEMENTS_SLC `xml:"bpmn:extensionElements,omitempty" json:"extensionElements,omitempty"`
 }
 
 // TAttributes ...
-type TAttributes struct {
+type TExtension_Elements struct {
 	ExtensionElements TEXTENSION_ELEMENTS_SLC `xml:"extensionElements,omitempty" json:"extensionElements,omitempty"`
 }
 

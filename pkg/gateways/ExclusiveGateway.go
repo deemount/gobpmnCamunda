@@ -1,8 +1,8 @@
 package gateways
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewExclusiveGateway ...
@@ -39,7 +39,7 @@ func (exclusiveGateway *ExclusiveGateway) SetCamundaJobPriority(priority int) {
 
 // SetExtensionElements ...
 func (exclusiveGateway *ExclusiveGateway) SetExtensionElements() {
-	exclusiveGateway.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	exclusiveGateway.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -51,17 +51,17 @@ func (exclusiveGateway *ExclusiveGateway) SetExtensionElements() {
 /** Camunda **/
 
 // GetCamundaAsyncBefore ...
-func (exclusiveGateway ExclusiveGateway) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (exclusiveGateway ExclusiveGateway) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &exclusiveGateway.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncAfter ...
-func (exclusiveGateway ExclusiveGateway) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (exclusiveGateway ExclusiveGateway) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &exclusiveGateway.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (exclusiveGateway ExclusiveGateway) GetCamundaJobPriority() impl.INT_PTR {
+func (exclusiveGateway ExclusiveGateway) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &exclusiveGateway.CamundaJobPriority
 }
 
@@ -70,6 +70,6 @@ func (exclusiveGateway ExclusiveGateway) GetCamundaJobPriority() impl.INT_PTR {
 /** BPMN **/
 
 // GetExtensionElements ...
-func (exclusiveGateway ExclusiveGateway) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (exclusiveGateway ExclusiveGateway) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &exclusiveGateway.ExtensionElements[0]
 }

@@ -1,8 +1,8 @@
 package subprocesses
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
 	"github.com/deemount/gobpmnCamunda/pkg/camunda"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 )
 
 // Subprocesses ...
@@ -17,19 +17,19 @@ type TSubprocesses struct{}
 
 // AdHocSubProcess ...
 type AdHocSubProcess struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 	camunda.CoreAttributes
 }
 
 // TAdHocSubProcess ...
 type TAdHocSubProcess struct {
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 	camunda.TCoreAttributes
 }
 
 // CallActivity ...
 type CallActivity struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 	camunda.CoreAttributes
 	CamundaCalledElementTenantID string `xml:"camunda:calledElementTenantId,attr,omitempty" json:"calledElementTenantId,omitempty"`
 	CamundaVariableMappingClass  string `xml:"camunda:variableMappingClass,attr,omitempty" json:"variableMappingClass,omitempty"`
@@ -37,7 +37,7 @@ type CallActivity struct {
 
 // TCallActivity ...
 type TCallActivity struct {
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 	camunda.TCoreAttributes
 	CamundaCalledElementTenantID string `xml:"calledElementTenantId,attr,omitempty" json:"calledElementTenantId,omitempty"`
 	CamundaVariableMappingClass  string `xml:"variableMappingClass,attr,omitempty" json:"variableMappingClass,omitempty"`
@@ -45,24 +45,24 @@ type TCallActivity struct {
 
 // SubProcess ...
 type SubProcess struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 	camunda.CoreAttributes
 }
 
 // TSubProcess ...
 type TSubProcess struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 	camunda.TCoreAttributes
 }
 
 // Transaction ...
 type Transaction struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 	camunda.CoreAttributes
 }
 
 // TTransaction ...
 type TTransaction struct {
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 	camunda.TCoreAttributes
 }

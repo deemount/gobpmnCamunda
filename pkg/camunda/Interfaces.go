@@ -1,6 +1,6 @@
 package camunda
 
-import impl "github.com/deemount/gobpmnTypes"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 /*
  * @Base
@@ -9,85 +9,87 @@ import impl "github.com/deemount/gobpmnTypes"
 // CamundaBaseScriptElements ...
 type CamundaBaseScriptElements interface {
 	SetCamundaScript()
-	GetCamundaScript() *CamundaScript
+	GetCamundaScript() CAMUNDA_SCRIPT_PTR
 }
 
 // CamundaDefaultAttributes ...
 type CamundaDefaultAttributes interface {
 	SetCamundaAsyncBefore(asyncBefore bool)
-	GetCamundaAsyncBefore() impl.BOOL_PTR
+	GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR
 	SetCamundaAsyncAfter(asyncAfter bool)
-	GetCamundaAsyncAfter() impl.BOOL_PTR
+	GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR
 	SetCamundaJobPriority(priority int)
-	GetCamundaJobPriority() impl.INT_PTR
+	GetCamundaJobPriority() gobpmnTypes.INT_PTR
 }
 
 type CamundaProcessAttributes interface {
 	SetCamundaVersionTag(tag string)
-	GetCamundaVersionTag() impl.STR_PTR
+	GetCamundaVersionTag() gobpmnTypes.STR_PTR
 	SetCamundaJobPriority(priority int)
-	GetCamundaJobPriority() impl.INT_PTR
+	GetCamundaJobPriority() gobpmnTypes.INT_PTR
 	SetCamundaTaskPriority(priority int)
-	GetCamundaTaskPriority() impl.INT_PTR
+	GetCamundaTaskPriority() gobpmnTypes.INT_PTR
 	SetCamundaCandidateStarterGroups(groups string)
-	GetCamundaCandidateStarterGroups() impl.STR_PTR
+	GetCamundaCandidateStarterGroups() gobpmnTypes.STR_PTR
 	SetCamundaCandiddateStarterUsers(users string)
-	GetCamundaCandiddateStarterUsers() impl.STR_PTR
+	GetCamundaCandiddateStarterUsers() gobpmnTypes.STR_PTR
 	SetCamundaHistoryTimeToLive(tolive string)
-	GetCamundaHistoryTimeToLive() impl.STR_PTR
+	GetCamundaHistoryTimeToLive() gobpmnTypes.STR_PTR
+}
+
+// ExtensionElementsRepository ...
+type ExtensionElementsRepository interface {
+	SetCamundaProperties()
+	GetCamundaProperties() CAMUNDA_PROPERTIES_PTR
+	SetCamundaFailedJobRetryCycle()
+	GetCamundaFailedJobRetryCycle() CAMUNDA_FAILED_JOB_RETRY_CYCLE_PTR
+	SetCamundaFormData()
+	GetCamundaFormData() CAMUNDA_FORM_DATA_PTR
+	SetCamundaInputOutput()
+	GetCamundaInputOutput() CAMUNDA_IO_PTR
+	SetCamundaTaskListener(num int)
+	GetCamundaTaskListener(num int) CAMUNDA_TASK_LISTENER_PTR
+	SetCamundaExecutionListener(num int)
+	GetCamundaExecutionListener(num int) CAMUNDA_EXECUTION_LISTENER_PTR
+	SetCamundaIn(num int)
+	GetCamundaIn(num int) CAMUNDA_IN_PTR
+	SetCamundaOut(num int)
+	GetCamundaOut(num int) CAMUNDA_OUT_PTR
 }
 
 /*
  * @Repositories
  */
 
-// ExtensionElementsRepository ...
-type ExtensionElementsRepository interface {
-	SetCamundaProperties()
-	GetCamundaProperties() *CamundaProperties
-	SetCamundaFailedJobRetryCycle()
-	GetCamundaFailedJobRetryCycle() *CamundaFailedJobRetryCycle
-	SetCamundaFormData()
-	GetCamundaFormData() *CamundaFormData
-	SetCamundaInputOutput()
-	GetCamundaInputOutput() *CamundaInputOutput
-	SetCamundaTaskListener(num int)
-	GetCamundaTaskListener(num int) *CamundaTaskListener
-	SetCamundaExecutionListener(num int)
-	GetCamundaExecutionListener(num int) *CamundaExecutionListener
-	SetCamundaIn(num int)
-	GetCamundaIn(num int) *CamundaIn
-	SetCamundaOut(num int)
-	GetCamundaOut(num int) *CamundaOut
-}
-
 // CamundaConnectorRepository ...
 type CamundaConnectorRepository interface{}
 
 // CamundaConnectorIDRepository ...
-type CamundaConnectorIDRepository interface{}
+type CamundaConnectorIDRepository interface {
+	gobpmnTypes.IFBaseID
+}
 
 // CamundaConstraintRepository ...
 type CamundaConstraintRepository interface {
-	impl.IFBaseName
-	impl.IFBaseConfig
+	gobpmnTypes.IFBaseName
+	gobpmnTypes.IFBaseConfig
 }
 
 // CamundaEntryRepository ...
 type CamundaEntryRepository interface {
-	impl.IFBaseValue
-	impl.IFBaseKey
+	gobpmnTypes.IFBaseValue
+	gobpmnTypes.IFBaseKey
 }
 
 // CamundaExecutionListener ...
 type CamundaExecutionListenerRepository interface {
-	impl.IFBaseEvent
-	impl.IFBaseClass
+	gobpmnTypes.IFBaseEvent
+	gobpmnTypes.IFBaseClass
 	CamundaBaseScriptElements
 	SetDelegateExpression(expr string)
-	GetDelegateExpression() impl.STR_PTR
+	GetDelegateExpression() gobpmnTypes.STR_PTR
 	SetCamundaField(num int)
-	GetCamundaField(num int) *CamundaField
+	GetCamundaField(num int) CAMUNDA_FIELD_PTR
 }
 
 // CamundaExpressionRepository ...
@@ -98,29 +100,29 @@ type CamundaFailedJobRetryCycleRepository interface{}
 
 // CamundaFieldRepository ...
 type CamundaFieldRepository interface {
-	impl.IFBaseName
+	gobpmnTypes.IFBaseName
 	SetCamundaExpression()
-	GetCamundaExpression() *CamundaExpression
+	GetCamundaExpression() CAMUNDA_EXPRESSION_PTR
 	SetCamundaString()
-	GetCamundaString() *CamundaString
+	GetCamundaString() CAMUNDA_STRING_PTR
 }
 
 // CamundaFormDataRepository ...
 type CamundaFormDataRepository interface {
 	SetCamundaFormField(num int)
-	GetCamundaFormField(num int) *CamundaFormField
+	GetCamundaFormField(num int) CAMUNDA_FORM_FIELD_PTR
 }
 
 // CamundaFormField ...
 type CamundaFormFieldRepository interface {
-	impl.IFBaseID
-	impl.IFBaseLabel
-	impl.IFBaseType
-	impl.IFBaseDefaultValue
+	gobpmnTypes.IFBaseID
+	gobpmnTypes.IFBaseLabel
+	gobpmnTypes.IFBaseType
+	gobpmnTypes.IFBaseDefaultValue
 	SetCamundaProperties()
-	GetCamundaProperties() *CamundaProperties
+	GetCamundaProperties() CAMUNDA_PROPERTIES_PTR
 	SetCamundaValidation()
-	GetCamundaValidation() *CamundaValidation
+	GetCamundaValidation() CAMUNDA_VALIDATION_PTR
 }
 
 // CamundaInRepository ...
@@ -129,32 +131,32 @@ type CamundaInRepository interface{}
 // CamundaInputOutputRepository ...
 type CamundaInputOutputRepository interface {
 	SetCamundaInputParameter(num int)
-	GetCamundaInputParameter(num int) *CamundaInputParameter
+	GetCamundaInputParameter(num int) CAMUNDA_INPUT_PARAMETER_PTR
 	SetCamundaOutputParameter(num int)
-	GetCamundaOutputParameter(num int) *CamundaOutputParameter
+	GetCamundaOutputParameter(num int) CAMUNDA_OUTPUT_PARAMETER_PTR
 }
 
 // CamundaInputParameterRepository ...
 type CamundaInputParameterRepository interface {
 	CamundaBaseScriptElements
-	impl.IFBaseLocalVariableName
-	impl.IFBaseVariableAssignmentValue
+	gobpmnTypes.IFBaseLocalVariableName
+	gobpmnTypes.IFBaseVariableAssignmentValue
 	SetCamundaList()
-	GetCamundaList() *CamundaList
+	GetCamundaList() CAMUNDA_LIST_PTR
 	SetCamundaMap()
-	GetCamundaMap() *CamundaMap
+	GetCamundaMap() CAMUNDA_MAP_PTR
 }
 
 // CamundaListRepository ...
 type CamundaListRepository interface {
 	SetCamundaValue(num int)
-	GetCamundaValue(num int) *CamundaValue
+	GetCamundaValue(num int) CAMUNDA_VALUE_PTR
 }
 
 // CamundaMapRepository ...
 type CamundaMapRepository interface {
 	SetCamundaEntry(num int)
-	GetCamundaEntry(num int) *CamundaEntry
+	GetCamundaEntry(num int) CAMUNDA_ENTRY_PTR
 }
 
 // CamundaOutRepository ...
@@ -163,29 +165,29 @@ type CamundaOutRepository interface{}
 // CamundaOutputParameter ...
 type CamundaOutputParameterRepository interface {
 	CamundaBaseScriptElements
-	impl.IFBaseLocalVariableName
-	impl.IFBaseVariableAssignmentValue
+	gobpmnTypes.IFBaseLocalVariableName
+	gobpmnTypes.IFBaseVariableAssignmentValue
 	SetCamundaList()
-	GetCamundaList() *CamundaList
+	GetCamundaList() CAMUNDA_LIST_PTR
 	SetCamundaMap()
-	GetCamundaMap() *CamundaMap
+	GetCamundaMap() CAMUNDA_MAP_PTR
 }
 
 // CamundaPropertiesRepository ...
 type CamundaPropertiesRepository interface {
 	SetCamundaProperty(num int)
-	GetCamundaProperty(num int) *CamundaProperty
+	GetCamundaProperty(num int) CAMUNDA_PROPERTY_PTR
 }
 
 // CamundaPropertyRepository ...
 type CamundaPropertyRepository interface {
-	impl.IFBaseName
-	impl.IFBaseValue
+	gobpmnTypes.IFBaseName
+	gobpmnTypes.IFBaseValue
 }
 
 // CamundaScriptRepository ...
 type CamundaScriptRepository interface {
-	impl.IFBaseScriptFormat
+	gobpmnTypes.IFBaseScriptFormat
 }
 
 // CamundaStringRepository ...
@@ -193,20 +195,20 @@ type CamundaStringRepository interface{}
 
 // CamundaTaskListener ...
 type CamundaTaskListenerRepository interface {
-	impl.IFBaseEvent
-	impl.IFBaseClass
-	impl.IFBaseListenerID
+	gobpmnTypes.IFBaseEvent
+	gobpmnTypes.IFBaseClass
+	gobpmnTypes.IFBaseListenerID
 	SetCamundaField(num int)
-	GetCamundaField(num int) *CamundaField
+	GetCamundaField(num int) CAMUNDA_FIELD_PTR
 }
 
 // CamundaValidationRepository ...
 type CamundaValidationRepository interface {
 	SetCamundaConstraint(num int)
-	GetCamundaConstraint(num int) *CamundaConstraint
+	GetCamundaConstraint(num int) CAMUNDA_CONSTRAINT_PTR
 }
 
 // CamundaValueRepository ...
 type CamundaValueRepository interface {
-	impl.IFBaseValue
+	gobpmnTypes.IFBaseValue
 }

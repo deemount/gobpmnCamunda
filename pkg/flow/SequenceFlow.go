@@ -1,8 +1,6 @@
 package flow
 
-import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-)
+import "github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 
 // NewSequenceFlow ...
 func NewSequenceFlow() SequenceFlowRepository {
@@ -19,7 +17,7 @@ func NewSequenceFlow() SequenceFlowRepository {
 
 // SetExtensionElements ...
 func (sequenceFlow *SequenceFlow) SetExtensionElements() {
-	sequenceFlow.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	sequenceFlow.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -31,6 +29,6 @@ func (sequenceFlow *SequenceFlow) SetExtensionElements() {
 /** BPMN **/
 
 // GetExtensionElements ...
-func (sequenceFlow SequenceFlow) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (sequenceFlow SequenceFlow) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &sequenceFlow.ExtensionElements[0]
 }

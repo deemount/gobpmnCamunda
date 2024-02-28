@@ -1,8 +1,8 @@
 package subprocesses
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewSubProcess ...
@@ -39,7 +39,7 @@ func (subprocess *SubProcess) SetCamundaJobPriority(priority int) {
 
 // SetExtensionElements ...
 func (subprocess *SubProcess) SetExtensionElements() {
-	subprocess.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	subprocess.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -51,17 +51,17 @@ func (subprocess *SubProcess) SetExtensionElements() {
 /** Camunda **/
 
 // GetCamundaAsyncBefore ...
-func (subprocess SubProcess) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (subprocess SubProcess) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &subprocess.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncAfter ...
-func (subprocess SubProcess) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (subprocess SubProcess) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &subprocess.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (subprocess SubProcess) GetCamundaJobPriority() impl.INT_PTR {
+func (subprocess SubProcess) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &subprocess.CamundaJobPriority
 }
 
@@ -70,6 +70,6 @@ func (subprocess SubProcess) GetCamundaJobPriority() impl.INT_PTR {
 /** BPMN **/
 
 // GetExtensionElements ...
-func (subprocess SubProcess) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (subprocess SubProcess) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &subprocess.ExtensionElements[0]
 }

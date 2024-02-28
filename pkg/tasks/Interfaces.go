@@ -1,8 +1,8 @@
 package tasks
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 /*
@@ -12,23 +12,17 @@ import (
 // TaskCamundaBase ...
 type TasksCamundaBase interface {
 	SetCamundaAsyncBefore(asyncBefore bool)
-	GetCamundaAsyncBefore() impl.BOOL_PTR
+	GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR
 	SetCamundaAsyncAfter(asyncAfter bool)
-	GetCamundaAsyncAfter() impl.BOOL_PTR
+	GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR
 	SetCamundaJobPriority(priority int)
-	GetCamundaJobPriority() impl.INT_PTR
-}
-
-// TasksBaseCoreElements ...
-type TasksBaseCoreElements interface {
-	SetExtensionElements()
-	GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR
+	GetCamundaJobPriority() gobpmnTypes.INT_PTR
 }
 
 // TasksBase ...
 type TasksBase interface {
 	TasksCamundaBase
-	TasksBaseCoreElements
+	extension_elements.ExtensionElementsBaseElements
 }
 
 /*
@@ -39,7 +33,7 @@ type TasksBase interface {
 type BusinessRuleTaskRepository interface {
 	TasksBase
 	SetCamundaClass(class string)
-	GetCamundaClass() impl.STR_PTR
+	GetCamundaClass() gobpmnTypes.STR_PTR
 }
 
 // ManualTaskRepository ...
@@ -76,17 +70,17 @@ type TaskRepository interface {
 type UserTaskRepository interface {
 	TasksBase
 	SetCamundaFormKey(formKey string)
-	GetCamundaFormKey() impl.STR_PTR
+	GetCamundaFormKey() gobpmnTypes.STR_PTR
 	SetCamundaAssignee(assignee string)
-	GetCamundaAssignee() impl.STR_PTR
+	GetCamundaAssignee() gobpmnTypes.STR_PTR
 	SetCamundaCandidateUsers(users string)
-	GetCamundaCandidateUsers() impl.STR_PTR
+	GetCamundaCandidateUsers() gobpmnTypes.STR_PTR
 	SetCamundaCandidateGroups(groups string)
-	GetCamundaCandidateGroups() impl.STR_PTR
+	GetCamundaCandidateGroups() gobpmnTypes.STR_PTR
 	SetCamundaDueDate(due string)
-	GetCamundaDueDate() impl.STR_PTR
+	GetCamundaDueDate() gobpmnTypes.STR_PTR
 	SetCamundaFollowUpDate(followUp string)
-	GetCamundaFollowUpDate() impl.STR_PTR
+	GetCamundaFollowUpDate() gobpmnTypes.STR_PTR
 	SetCamundaPriority(priority int)
-	GetCamundaPriority() impl.INT_PTR
+	GetCamundaPriority() gobpmnTypes.INT_PTR
 }

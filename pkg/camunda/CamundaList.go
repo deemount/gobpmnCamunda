@@ -6,7 +6,7 @@ func NewCamundaList() CamundaListRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Elements */
@@ -15,11 +15,11 @@ func NewCamundaList() CamundaListRepository {
 
 // SetCamundaValue ...
 func (list *CamundaList) SetCamundaValue(num int) {
-	list.CamundaValue = make([]CamundaValue, num)
+	list.CamundaValue = make(CAMUNDA_VALUE_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Elements */
@@ -27,6 +27,6 @@ func (list *CamundaList) SetCamundaValue(num int) {
 /** Camunda **/
 
 // GetCamundaValue ...
-func (list CamundaList) GetCamundaValue(num int) *CamundaValue {
+func (list CamundaList) GetCamundaValue(num int) CAMUNDA_VALUE_PTR {
 	return &list.CamundaValue[num]
 }

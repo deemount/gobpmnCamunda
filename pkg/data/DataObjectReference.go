@@ -1,9 +1,9 @@
 package data
 
-import "github.com/deemount/gobpmnCamunda/pkg/attributes"
+import "github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Elements */
@@ -12,11 +12,11 @@ import "github.com/deemount/gobpmnCamunda/pkg/attributes"
 
 // SetExtensionElements ...
 func (dor *DataObjectReference) SetExtensionElements() {
-	dor.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	dor.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Elements */
@@ -24,6 +24,6 @@ func (dor *DataObjectReference) SetExtensionElements() {
 /** BPMN **/
 
 // GetExtensionElements ...
-func (dor DataObjectReference) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (dor DataObjectReference) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &dor.ExtensionElements[0]
 }

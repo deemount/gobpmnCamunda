@@ -1,8 +1,6 @@
 package marker
 
-import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-)
+import "github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 
 /*
  * @Repositories
@@ -10,7 +8,7 @@ import (
 
 // CategoryRepository ...
 type CategoryRepository interface {
-	attributes.AttributesBaseElements
+	extension_elements.ExtensionElementsBaseElements
 }
 
 // CategoryValueRepository ...
@@ -18,7 +16,7 @@ type CategoryValueRepository interface{}
 
 // GroupRepository ...
 type GroupRepository interface {
-	attributes.AttributesBaseElements
+	extension_elements.ExtensionElementsBaseElements
 }
 
 // IncomingRepository ...

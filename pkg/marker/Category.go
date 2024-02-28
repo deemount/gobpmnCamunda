@@ -1,8 +1,6 @@
 package marker
 
-import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-)
+import "github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 
 // NewCategory ...
 func NewCategory() CategoryRepository {
@@ -19,7 +17,7 @@ func NewCategory() CategoryRepository {
 
 // SetExtensionElements ...
 func (category *Category) SetExtensionElements() {
-	category.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	category.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -31,6 +29,6 @@ func (category *Category) SetExtensionElements() {
 /** BPMN **/
 
 // GetExtensionElements ...
-func (category Category) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (category Category) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &category.ExtensionElements[0]
 }

@@ -1,9 +1,9 @@
 package subprocesses
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
 	"github.com/deemount/gobpmnCamunda/pkg/camunda"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 /*
@@ -12,7 +12,7 @@ import (
 
 // SubprocessesBase ...
 type SubprocessesBase interface {
-	attributes.AttributesBaseElements
+	extension_elements.ExtensionElementsBaseElements
 	camunda.CamundaDefaultAttributes
 }
 
@@ -30,10 +30,10 @@ type CallActivityRepository interface {
 	SubprocessesBase
 
 	SetCamundaCalledElementTenantID(tenantID string)
-	GetCamundaCalledElementTenantID() impl.STR_PTR
+	GetCamundaCalledElementTenantID() gobpmnTypes.STR_PTR
 
 	SetCamundaVariableMappingClass(class string)
-	GetCamundaVariableMappingClass() impl.STR_PTR
+	GetCamundaVariableMappingClass() gobpmnTypes.STR_PTR
 }
 
 // SubProcessRepository ...

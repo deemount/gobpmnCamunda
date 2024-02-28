@@ -1,8 +1,6 @@
 package marker
 
-import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-)
+import "github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 
 /*
  * Elementary
@@ -16,12 +14,12 @@ type TIncomingOutgoing struct{}
 
 // Category ...
 type Category struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 }
 
 // TCategory ...
 type TCategory struct {
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 }
 
 // CategoryValue ...
@@ -29,12 +27,12 @@ type CategoryValue struct{}
 
 // Group ...
 type Group struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 }
 
 // TGroup ...
 type TGroup struct {
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 }
 
 // Incoming ...

@@ -1,8 +1,8 @@
 package subprocesses
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewCallActivity ...
@@ -49,7 +49,7 @@ func (ca *CallActivity) SetCamundaVariableMappingClass(class string) {
 
 // SetExtensionElements ...
 func (ca *CallActivity) SetExtensionElements() {
-	ca.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	ca.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -61,27 +61,27 @@ func (ca *CallActivity) SetExtensionElements() {
 /** Camunda **/
 
 // GetCamundaAsyncBefore ...
-func (ca CallActivity) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (ca CallActivity) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &ca.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncAfter ...
-func (ca CallActivity) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (ca CallActivity) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &ca.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (ca CallActivity) GetCamundaJobPriority() impl.INT_PTR {
+func (ca CallActivity) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &ca.CamundaJobPriority
 }
 
 // GetCamundaCalledElementTenantID ...
-func (ca CallActivity) GetCamundaCalledElementTenantID() impl.STR_PTR {
+func (ca CallActivity) GetCamundaCalledElementTenantID() gobpmnTypes.STR_PTR {
 	return &ca.CamundaCalledElementTenantID
 }
 
 // GetCamundaVariableMappingClass ...
-func (ca CallActivity) GetCamundaVariableMappingClass() impl.STR_PTR {
+func (ca CallActivity) GetCamundaVariableMappingClass() gobpmnTypes.STR_PTR {
 	return &ca.CamundaVariableMappingClass
 }
 
@@ -90,6 +90,6 @@ func (ca CallActivity) GetCamundaVariableMappingClass() impl.STR_PTR {
 /** BPMN **/
 
 // GetExtensionElements ...
-func (ca CallActivity) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (ca CallActivity) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &ca.ExtensionElements[0]
 }

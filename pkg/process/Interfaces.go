@@ -1,8 +1,8 @@
 package process
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
 	"github.com/deemount/gobpmnCamunda/pkg/camunda"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 )
 
 /*
@@ -11,6 +11,6 @@ import (
 
 // ProcessRepository ...
 type ProcessRepository interface {
-	attributes.AttributesBaseElements
+	extension_elements.ExtensionElementsBaseElements
 	camunda.CamundaProcessAttributes
 }

@@ -6,7 +6,7 @@ func NewCamundaString() CamundaStringRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -18,7 +18,7 @@ func NewCamundaString() CamundaStringRepository {
 /** Camunda **/
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

@@ -1,6 +1,6 @@
 package camunda
 
-import impl "github.com/deemount/gobpmnTypes"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // NewCamundaOutputParameter ...
 func NewCamundaOutputParameter() CamundaOutputParameterRepository {
@@ -8,7 +8,7 @@ func NewCamundaOutputParameter() CamundaOutputParameterRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -31,21 +31,21 @@ func (outputParameter *CamundaOutputParameter) SetVariableAssignmentValue(value 
 
 // SetCamundaScript ...
 func (outputParameter *CamundaOutputParameter) SetCamundaScript() {
-	outputParameter.CamundaScript = make([]CamundaScript, 1)
+	outputParameter.CamundaScript = make(CAMUNDA_SCRIPT_SLC, 1)
 }
 
 // SetCamundaList ...
 func (outputParameter *CamundaOutputParameter) SetCamundaList() {
-	outputParameter.CamundaList = make([]CamundaList, 1)
+	outputParameter.CamundaList = make(CAMUNDA_LIST_SLC, 1)
 }
 
 // SetCamundaMap ...
 func (outputParameter *CamundaOutputParameter) SetCamundaMap() {
-	outputParameter.CamundaMap = make([]CamundaMap, 1)
+	outputParameter.CamundaMap = make(CAMUNDA_MAP_SLC, 1)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
@@ -53,12 +53,12 @@ func (outputParameter *CamundaOutputParameter) SetCamundaMap() {
 /** BPMN **/
 
 // GetName ...
-func (outputParameter CamundaOutputParameter) GetLocalVariableName() impl.STR_PTR {
+func (outputParameter CamundaOutputParameter) GetLocalVariableName() gobpmnTypes.STR_PTR {
 	return &outputParameter.LocalVariableName
 }
 
 // GetVariableAssignmentValue ...
-func (outputParameter CamundaOutputParameter) GetVariableAssignmentValue() impl.STR_PTR {
+func (outputParameter CamundaOutputParameter) GetVariableAssignmentValue() gobpmnTypes.STR_PTR {
 	return &outputParameter.VariableAssignmentValue
 }
 
@@ -67,16 +67,16 @@ func (outputParameter CamundaOutputParameter) GetVariableAssignmentValue() impl.
 /** Camunda **/
 
 // GetCamundaScript ...
-func (outputParameter CamundaOutputParameter) GetCamundaScript() *CamundaScript {
+func (outputParameter CamundaOutputParameter) GetCamundaScript() CAMUNDA_SCRIPT_PTR {
 	return &outputParameter.CamundaScript[0]
 }
 
 // GetCamundaList ...
-func (outputParameter CamundaOutputParameter) GetCamundaList() *CamundaList {
+func (outputParameter CamundaOutputParameter) GetCamundaList() CAMUNDA_LIST_PTR {
 	return &outputParameter.CamundaList[0]
 }
 
 // GetCamundaMap ...
-func (outputParameter CamundaOutputParameter) GetCamundaMap() *CamundaMap {
+func (outputParameter CamundaOutputParameter) GetCamundaMap() CAMUNDA_MAP_PTR {
 	return &outputParameter.CamundaMap[0]
 }

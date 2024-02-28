@@ -1,8 +1,8 @@
 package gateways
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
 	"github.com/deemount/gobpmnCamunda/pkg/camunda"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 )
 
 /*
@@ -12,7 +12,7 @@ import (
 // GatewayBase ...
 type GatewayBase interface {
 	camunda.CamundaDefaultAttributes
-	attributes.AttributesBaseElements
+	extension_elements.ExtensionElementsBaseElements
 }
 
 /*

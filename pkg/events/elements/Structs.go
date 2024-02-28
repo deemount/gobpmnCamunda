@@ -1,8 +1,8 @@
 package elements
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
 	"github.com/deemount/gobpmnCamunda/pkg/camunda"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 )
 
 /*
@@ -12,41 +12,41 @@ import (
 // EndEvent ...
 type EndEvent struct {
 	camunda.CoreAttributes
-	attributes.Attributes
+	extension_elements.Extension_Elements
 }
 
 // TEndEvent ...
 type TEndEvent struct {
 	camunda.TCoreAttributes
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 }
 
 // IntermediateCatchEvent ...
 type IntermediateCatchEvent struct {
 	camunda.CoreAttributes
-	attributes.Attributes
+	extension_elements.Extension_Elements
 }
 
 // TIntermediateCatchEvent ...
 type TIntermediateCatchEvent struct {
 	camunda.TCoreAttributes
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 }
 
 // IntermediateThrowEvent ...
 type IntermediateThrowEvent struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 }
 
 // TIntermediateThrowEvent ...
 type TIntermediateThrowEvent struct {
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 }
 
 // StartEvent ...
 type StartEvent struct {
 	camunda.CoreAttributes
-	attributes.Attributes
+	extension_elements.Extension_Elements
 	CamundaFormKey        string `xml:"camunda:formKey,attr,omitempty" json:"formKey,omitempty"`
 	CamundaFormRef        string `xml:"camunda:formRef,attr,omitempty" json:"formRef,omitempty"`
 	CamundaFormRefBind    string `xml:"camunda:formRefBinding,attr,omitempty" json:"formRefBind,omitempty"`
@@ -57,7 +57,7 @@ type StartEvent struct {
 // TStartEvent ...
 type TStartEvent struct {
 	camunda.TCoreAttributes
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 	FormKey        string `xml:"formKey,attr,omitempty" json:"formKey,omitempty"`
 	FormRef        string `xml:"formRef,attr,omitempty" json:"formRef,omitempty"`
 	FormRefBind    string `xml:"formRefBinding,attr,omitempty" json:"formRefBind,omitempty"`

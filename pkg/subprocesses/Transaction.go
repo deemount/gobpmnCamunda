@@ -1,8 +1,8 @@
 package subprocesses
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewTransaction ...
@@ -41,7 +41,7 @@ func (transaction *Transaction) SetCamundaJobPriority(priority int) {
 
 // SetExtensionElements ...
 func (transaction *Transaction) SetExtensionElements() {
-	transaction.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	transaction.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -53,17 +53,17 @@ func (transaction *Transaction) SetExtensionElements() {
 /** Camunda **/
 
 // GetCamundaAsyncBefore ...
-func (transaction Transaction) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (transaction Transaction) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &transaction.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncAfter ...
-func (transaction Transaction) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (transaction Transaction) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &transaction.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (transaction Transaction) GetCamundaJobPriority() impl.INT_PTR {
+func (transaction Transaction) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &transaction.CamundaJobPriority
 }
 
@@ -72,6 +72,6 @@ func (transaction Transaction) GetCamundaJobPriority() impl.INT_PTR {
 /** BPMN **/
 
 // GetExtensionElements ...
-func (transaction Transaction) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (transaction Transaction) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &transaction.ExtensionElements[0]
 }

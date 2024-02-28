@@ -1,8 +1,8 @@
 package gateways
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
 	"github.com/deemount/gobpmnCamunda/pkg/camunda"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 )
 
 /*
@@ -12,59 +12,59 @@ import (
 // ComplexGateway ...
 type ComplexGateway struct {
 	camunda.CoreAttributes
-	attributes.Attributes
+	extension_elements.Extension_Elements
 }
 
 // TComplexGateway ...
 type TComplexGateway struct {
 	camunda.TCoreAttributes
-	attributes.Attributes
+	extension_elements.Extension_Elements
 }
 
 // EventBasedGateway ...
 type EventBasedGateway struct {
 	camunda.CoreAttributes
-	attributes.Attributes
+	extension_elements.Extension_Elements
 }
 
 // TEventBasedGateway ...
 type TEventBasedGateway struct {
 	camunda.TCoreAttributes
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 }
 
 // ExclusiveGateway ...
 type ExclusiveGateway struct {
 	camunda.CoreAttributes
-	attributes.Attributes
+	extension_elements.Extension_Elements
 }
 
 // TExclusiveGateway ...
 type TExclusiveGateway struct {
 	camunda.TCoreAttributes
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 }
 
 // InclusiveGateway ...
 type InclusiveGateway struct {
 	camunda.CoreAttributes
-	attributes.Attributes
+	extension_elements.Extension_Elements
 }
 
 // TInclusiveGateway ...
 type TInclusiveGateway struct {
 	camunda.TCoreAttributes
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 }
 
 // ParallelGateway ...
 type ParallelGateway struct {
 	camunda.CoreAttributes
-	attributes.Attributes
+	extension_elements.Extension_Elements
 }
 
 // TParallelGateway ...
 type TParallelGateway struct {
 	camunda.TCoreAttributes
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 }

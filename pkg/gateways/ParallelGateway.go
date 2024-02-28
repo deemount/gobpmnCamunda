@@ -1,8 +1,8 @@
 package gateways
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewParallelGateway ...
@@ -39,7 +39,7 @@ func (parallelGateway *ParallelGateway) SetCamundaJobPriority(priority int) {
 
 // SetExtensionElements ...
 func (parallelGateway *ParallelGateway) SetExtensionElements() {
-	parallelGateway.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	parallelGateway.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -51,17 +51,17 @@ func (parallelGateway *ParallelGateway) SetExtensionElements() {
 /** Camunda **/
 
 // GetCamundaAsyncBefore ...
-func (parallelGateway ParallelGateway) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (parallelGateway ParallelGateway) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &parallelGateway.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncAfter ...
-func (parallelGateway ParallelGateway) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (parallelGateway ParallelGateway) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &parallelGateway.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (parallelGateway ParallelGateway) GetCamundaJobPriority() impl.INT_PTR {
+func (parallelGateway ParallelGateway) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &parallelGateway.CamundaJobPriority
 }
 
@@ -70,6 +70,6 @@ func (parallelGateway ParallelGateway) GetCamundaJobPriority() impl.INT_PTR {
 /** BPMN **/
 
 // GetExtensionElements ...
-func (parallelGateway ParallelGateway) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (parallelGateway ParallelGateway) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &parallelGateway.ExtensionElements[0]
 }

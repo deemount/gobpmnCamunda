@@ -1,8 +1,6 @@
 package marker
 
-import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-)
+import "github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 
 // NewGroup ...
 func NewGroup() GroupRepository {
@@ -19,7 +17,7 @@ func NewGroup() GroupRepository {
 
 // SetExtensionElements ...
 func (group *Group) SetExtensionElements() {
-	group.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	group.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -31,6 +29,6 @@ func (group *Group) SetExtensionElements() {
 /** BPMN **/
 
 // GetExtensionElements ...
-func (group Group) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (group Group) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &group.ExtensionElements[0]
 }

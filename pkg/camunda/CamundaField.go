@@ -1,6 +1,6 @@
 package camunda
 
-import impl "github.com/deemount/gobpmnTypes"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // NewCamundaField ...
 func NewCamundaField() CamundaFieldRepository {
@@ -8,7 +8,7 @@ func NewCamundaField() CamundaFieldRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -30,22 +30,22 @@ func (cf *CamundaField) SetName(name string) {
 
 // SetCamundaExpression ...
 func (cf *CamundaField) SetCamundaExpression() {
-	cf.CamundaExpression = make([]CamundaExpression, 1)
+	cf.CamundaExpression = make(CAMUNDA_EXPRESSION_SLC, 1)
 }
 
 // SetCamundaString ...
 func (cf *CamundaField) SetCamundaString() {
-	cf.CamundaString = make([]CamundaString, 1)
+	cf.CamundaString = make(CAMUNDA_STRING_SLC, 1)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
 
 // GetName ...
-func (cf CamundaField) GetName() impl.STR_PTR {
+func (cf CamundaField) GetName() gobpmnTypes.STR_PTR {
 	return &cf.Name
 }
 
@@ -54,11 +54,11 @@ func (cf CamundaField) GetName() impl.STR_PTR {
 /** Camunda **/
 
 // GetCamundaExpression ...
-func (cf CamundaField) GetCamundaExpression() *CamundaExpression {
+func (cf CamundaField) GetCamundaExpression() CAMUNDA_EXPRESSION_PTR {
 	return &cf.CamundaExpression[0]
 }
 
 // GetCamundaString ...
-func (cf CamundaField) GetCamundaString() *CamundaString {
+func (cf CamundaField) GetCamundaString() CAMUNDA_STRING_PTR {
 	return &cf.CamundaString[0]
 }

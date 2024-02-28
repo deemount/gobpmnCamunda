@@ -1,8 +1,8 @@
 package tasks
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewScriptTask ...
@@ -39,7 +39,7 @@ func (scriptTask *ScriptTask) SetCamundaJobPriority(priority int) {
 
 // SetExtensionElements ...
 func (scriptTask *ScriptTask) SetExtensionElements() {
-	scriptTask.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	scriptTask.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -51,17 +51,17 @@ func (scriptTask *ScriptTask) SetExtensionElements() {
 /** Camunda **/
 
 // GetCamundaAsyncBefore ...
-func (scriptTask ScriptTask) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (scriptTask ScriptTask) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &scriptTask.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncAfter ...
-func (scriptTask ScriptTask) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (scriptTask ScriptTask) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &scriptTask.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (scriptTask ScriptTask) GetCamundaJobPriority() impl.INT_PTR {
+func (scriptTask ScriptTask) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &scriptTask.CamundaJobPriority
 }
 
@@ -70,6 +70,6 @@ func (scriptTask ScriptTask) GetCamundaJobPriority() impl.INT_PTR {
 /** BPMN **/
 
 // GetExtensionElements ...
-func (scriptTask ScriptTask) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (scriptTask ScriptTask) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &scriptTask.ExtensionElements[0]
 }

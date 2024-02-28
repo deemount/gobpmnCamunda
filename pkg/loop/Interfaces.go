@@ -1,8 +1,8 @@
 package loop
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 type LoopBaseID interface{}
@@ -21,14 +21,14 @@ type LoopCardinalityRepository interface{}
 // MultiInstanceLoopCharacteristicsRepository ...
 type MultiInstanceLoopCharacteristicsRepository interface {
 	SetCamundaAsyncBefore(asyncBefore bool)
-	GetCamundaAsyncBefore() impl.BOOL_PTR
+	GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR
 	SetCamundaAsyncAfter(asyncAfter bool)
-	GetCamundaAsyncAfter() impl.BOOL_PTR
+	GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR
 	SetCamundaCollection(collection string)
-	GetCamundaCollection() impl.STR_PTR
+	GetCamundaCollection() gobpmnTypes.STR_PTR
 	SetCamundaElementVariable(element string)
-	GetCamundaElementVariable() impl.STR_PTR
-	attributes.AttributesBaseElements
+	GetCamundaElementVariable() gobpmnTypes.STR_PTR
+	extension_elements.ExtensionElementsBaseElements
 }
 
 // ParticipantMultiplicityRepository ...

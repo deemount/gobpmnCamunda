@@ -1,6 +1,6 @@
 package camunda
 
-import impl "github.com/deemount/gobpmnTypes"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // NewCamundaExecutionListener ...
 func NewCamundaExecutionListener() CamundaExecutionListenerRepository {
@@ -8,7 +8,7 @@ func NewCamundaExecutionListener() CamundaExecutionListenerRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -41,34 +41,34 @@ func (executionListener *CamundaExecutionListener) SetCamundaField(num int) {
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */
 
 // GetClass ..
-func (executionListener CamundaExecutionListener) GetClass() impl.STR_PTR {
+func (executionListener CamundaExecutionListener) GetClass() gobpmnTypes.STR_PTR {
 	return &executionListener.Class
 }
 
 // GetEvent ...
-func (executionListener CamundaExecutionListener) GetEvent() impl.STR_PTR {
+func (executionListener CamundaExecutionListener) GetEvent() gobpmnTypes.STR_PTR {
 	return &executionListener.Event
 }
 
 // GetDelegateExpression ...
-func (executionListener CamundaExecutionListener) GetDelegateExpression() impl.STR_PTR {
+func (executionListener CamundaExecutionListener) GetDelegateExpression() gobpmnTypes.STR_PTR {
 	return &executionListener.DelegateExpr
 }
 
 /* Elements */
 
 // GetCamundaScript ...
-func (executionListener CamundaExecutionListener) GetCamundaScript() *CamundaScript {
+func (executionListener CamundaExecutionListener) GetCamundaScript() CAMUNDA_SCRIPT_PTR {
 	return &executionListener.CamundaScript[0]
 }
 
 // GetCamundaField ...
-func (executionListener CamundaExecutionListener) GetCamundaField(num int) *CamundaField {
+func (executionListener CamundaExecutionListener) GetCamundaField(num int) CAMUNDA_FIELD_PTR {
 	return &executionListener.CamundaField[num]
 }

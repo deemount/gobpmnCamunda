@@ -1,8 +1,6 @@
 package data
 
-import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-)
+import "github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 
 /*
  * @Repositories
@@ -13,10 +11,10 @@ type DataObjectRepository interface{}
 
 // DataObjectReferenceRepository ...
 type DataObjectReferenceRepository interface {
-	attributes.AttributesBaseElements
+	extension_elements.ExtensionElementsBaseElements
 }
 
 // DataStoreRepository ...
 type DataStoreReferenceRepository interface {
-	attributes.AttributesBaseElements
+	extension_elements.ExtensionElementsBaseElements
 }

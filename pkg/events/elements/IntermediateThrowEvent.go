@@ -1,8 +1,6 @@
 package elements
 
-import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-)
+import "github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 
 // NewIntermediateThrowEvent ...
 func NewIntermediateThrowEvent() IntermediateThrowEventRepository {
@@ -19,7 +17,7 @@ func NewIntermediateThrowEvent() IntermediateThrowEventRepository {
 
 // SetExtensionElements ...
 func (intermediateThrowEvent *IntermediateThrowEvent) SetExtensionElements() {
-	intermediateThrowEvent.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	intermediateThrowEvent.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -31,6 +29,6 @@ func (intermediateThrowEvent *IntermediateThrowEvent) SetExtensionElements() {
 /** BPMN **/
 
 // GetExtensionElements ...
-func (intermediateThrowEvent IntermediateThrowEvent) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (intermediateThrowEvent IntermediateThrowEvent) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &intermediateThrowEvent.ExtensionElements[0]
 }

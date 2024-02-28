@@ -6,7 +6,7 @@ func NewCamundaProperties() CamundaPropertiesRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Elements */
@@ -15,11 +15,11 @@ func NewCamundaProperties() CamundaPropertiesRepository {
 
 // SetCamundaProperties ...
 func (properties *CamundaProperties) SetCamundaProperty(num int) {
-	properties.CamundaProperty = make([]CamundaProperty, num)
+	properties.CamundaProperty = make(CAMUNDA_PROPERTY_SLC, num)
 }
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Elements */
@@ -27,6 +27,6 @@ func (properties *CamundaProperties) SetCamundaProperty(num int) {
 /** Camunda **/
 
 // GetCamundaProperties ...
-func (properties CamundaProperties) GetCamundaProperty(num int) *CamundaProperty {
+func (properties CamundaProperties) GetCamundaProperty(num int) CAMUNDA_PROPERTY_PTR {
 	return &properties.CamundaProperty[num]
 }

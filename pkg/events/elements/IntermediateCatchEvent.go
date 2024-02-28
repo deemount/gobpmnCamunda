@@ -1,8 +1,8 @@
 package elements
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewIntermediateCatchEvent ...
@@ -39,7 +39,7 @@ func (ice *IntermediateCatchEvent) SetCamundaJobPriority(priority int) {
 
 // SetExtensionElements ...
 func (ice *IntermediateCatchEvent) SetExtensionElements() {
-	ice.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	ice.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -51,17 +51,17 @@ func (ice *IntermediateCatchEvent) SetExtensionElements() {
 /** Camunda **/
 
 // GetCamundaAsyncBefore ...
-func (ice IntermediateCatchEvent) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (ice IntermediateCatchEvent) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &ice.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncBefore ...
-func (ice IntermediateCatchEvent) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (ice IntermediateCatchEvent) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &ice.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (ice IntermediateCatchEvent) GetCamundaJobPriority() impl.INT_PTR {
+func (ice IntermediateCatchEvent) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &ice.CamundaJobPriority
 }
 
@@ -70,6 +70,6 @@ func (ice IntermediateCatchEvent) GetCamundaJobPriority() impl.INT_PTR {
 /** BPMN **/
 
 // GetExtensionElements ...
-func (ice IntermediateCatchEvent) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (ice IntermediateCatchEvent) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &ice.ExtensionElements[0]
 }

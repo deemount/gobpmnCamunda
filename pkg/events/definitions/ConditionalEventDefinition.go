@@ -1,6 +1,6 @@
 package definitions
 
-import impl "github.com/deemount/gobpmnTypes"
+import gobpmnTypes "github.com/deemount/gobpmnTypes"
 
 // NewConditionalEventDefinition ...
 func NewConditionalEventDefinition() ConditionalEventDefinitionRepository {
@@ -29,6 +29,6 @@ func (conditionalEventDefinition *ConditionalEventDefinition) SetCamundaVariable
 /** Camunda **/
 
 // GetCamundaVariableName ...
-func (conditionalEventDefinition ConditionalEventDefinition) GetCamundaVariableName() impl.STR_PTR {
+func (conditionalEventDefinition ConditionalEventDefinition) GetCamundaVariableName() gobpmnTypes.STR_PTR {
 	return &conditionalEventDefinition.CamundaVariableName
 }

@@ -6,7 +6,7 @@ func NewCamundaFailedJobRetryCycle() CamundaFailedJobRetryCycleRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -18,7 +18,7 @@ func NewCamundaFailedJobRetryCycle() CamundaFailedJobRetryCycleRepository {
 /** Camunda **/
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

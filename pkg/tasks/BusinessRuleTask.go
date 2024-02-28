@@ -1,8 +1,8 @@
 package tasks
 
 import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-	impl "github.com/deemount/gobpmnTypes"
+	"github.com/deemount/gobpmnCamunda/pkg/extension_elements"
+	gobpmnTypes "github.com/deemount/gobpmnTypes"
 )
 
 // NewBusinessRuleTask ...
@@ -44,7 +44,7 @@ func (businessRuleTask *BusinessRuleTask) SetCamundaClass(class string) {
 
 // SetExtensionElements ...
 func (businessRuleTask *BusinessRuleTask) SetExtensionElements() {
-	businessRuleTask.ExtensionElements = make([]attributes.ExtensionElements, 1)
+	businessRuleTask.ExtensionElements = make(extension_elements.EXTENSION_ELEMENTS_SLC, 1)
 }
 
 /*
@@ -56,22 +56,22 @@ func (businessRuleTask *BusinessRuleTask) SetExtensionElements() {
 /** Camunda **/
 
 // GetCamundaAsyncBefore ...
-func (businessRuleTask BusinessRuleTask) GetCamundaAsyncBefore() impl.BOOL_PTR {
+func (businessRuleTask BusinessRuleTask) GetCamundaAsyncBefore() gobpmnTypes.BOOL_PTR {
 	return &businessRuleTask.CamundaAsyncBefore
 }
 
 // GetCamundaAsyncAfter ...
-func (businessRuleTask BusinessRuleTask) GetCamundaAsyncAfter() impl.BOOL_PTR {
+func (businessRuleTask BusinessRuleTask) GetCamundaAsyncAfter() gobpmnTypes.BOOL_PTR {
 	return &businessRuleTask.CamundaAsyncAfter
 }
 
 // GetCamundaJobPriority ...
-func (businessRuleTask BusinessRuleTask) GetCamundaJobPriority() impl.INT_PTR {
+func (businessRuleTask BusinessRuleTask) GetCamundaJobPriority() gobpmnTypes.INT_PTR {
 	return &businessRuleTask.CamundaJobPriority
 }
 
 // GetCamundaClass ...
-func (businessRuleTask BusinessRuleTask) GetCamundaClass() impl.STR_PTR {
+func (businessRuleTask BusinessRuleTask) GetCamundaClass() gobpmnTypes.STR_PTR {
 	return &businessRuleTask.CamundaClass
 }
 
@@ -80,6 +80,6 @@ func (businessRuleTask BusinessRuleTask) GetCamundaClass() impl.STR_PTR {
 /** BPMN **/
 
 // SetExtensionElements ...
-func (businessRuleTask BusinessRuleTask) GetExtensionElements() attributes.EXTENSION_ELEMENTS_PTR {
+func (businessRuleTask BusinessRuleTask) GetExtensionElements() extension_elements.EXTENSION_ELEMENTS_PTR {
 	return &businessRuleTask.ExtensionElements[0]
 }

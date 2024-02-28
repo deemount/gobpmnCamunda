@@ -6,7 +6,7 @@ func NewDataObject() DataObjectRepository {
 }
 
 /*
- * Default Setters
+ * @Setters
  */
 
 /* Attributes */
@@ -18,7 +18,7 @@ func NewDataObject() DataObjectRepository {
 /** Camunda **/
 
 /*
- * Default Getters
+ * @Getters
  */
 
 /* Attributes */

@@ -1,28 +1,26 @@
 package data
 
-import (
-	"github.com/deemount/gobpmnCamunda/pkg/attributes"
-)
+import "github.com/deemount/gobpmnCamunda/pkg/extension_elements"
 
 // DataObject ...
 type DataObject struct{}
 
 // DataObjectReference ...
 type DataObjectReference struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 }
 
 // TDataObjectReference ...
 type TDataObjectReference struct {
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 }
 
 // DataStoreReference ...
 type DataStoreReference struct {
-	attributes.Attributes
+	extension_elements.Extension_Elements
 }
 
 // TDataStoreReference ...
 type TDataStoreReference struct {
-	attributes.TAttributes
+	extension_elements.TExtension_Elements
 }
