@@ -24,8 +24,12 @@ In addition, a repository with available applications has now been created. Exam
 
 ## Modules
 
++ [gobpmnTypes](https://github.com/deemount/gobpmnTypes)
 + [gobpmnModels](https://github.com/deemount/gobpmnModels)
 + [gobpmnDiagram](https://github.com/deemount/gobpmnDiagram)
++ [gobpmnReader](https://github.com/deemount/gobpmnReader)
 + [gobpmnBuilder](https://github.com/deemount/gobpmnBuilder)
++ [gobpmnReader](https://github.com/deemount/gobpmnReader)
++ [gobpmnCounter](https://github.com/deemount/gobpmnCounter)
++ [gobpmnHash](https://github.com/deemount/gobpmnHash)
 + [gobpmnReflection](https://github.com/deemount/gobpmnReflection)
-+ [gobpmnTypes](https://github.com/deemount/gobpmnTypes)
